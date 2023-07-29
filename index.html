@@ -1,0 +1,307 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>From128</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="icon" href="images/favicon.png">
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-43112646-3"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+
+            gtag('config', 'UA-43112646-3');
+        </script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script>
+            function contact_me() {
+                var data = $("#contact-form :input").serializeArray();
+                data.push({name: 'formType', value: '128 General Contact'});
+                $.ajax({
+                    type: "POST",
+                    data: data,
+                    url: "Includes/128-contact-me.php",
+                    timeout: 5000,
+                    success: function (data) {
+                        tmp = JSON.parse(data);
+                        if (tmp.status == '1') {
+                            swal("Awesome!", tmp.message, "success");
+                            $("#contact-form")[0].reset();
+                            return;
+                        } else {
+                            swal({
+                                title: "Error",
+                                text: tmp.message,
+                                icon: "warning"
+                            });
+                            return;
+                        }
+                    }, //end success
+                    error: function (jqXHR, textStatus, errorThrown) {
+                        if (textStatus === "timeout") {
+                            swal("Error", "Server response is taking longer than usual, pleas try again later.",
+                                    "error");
+                        }
+                    }
+                }); //end restroom request ajax
+            }
+        </script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+        <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+    </head>
+    <body>
+
+        <!-- Header -->
+        <header id="header">
+            <nav>
+                <ul>
+                    <li><a href="#menu">Menu</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Menu -->
+        <nav id="menu">
+            <h2>Menu</h2>
+            <ul class="links">
+                <li><a href="index.html#portfolio">Portfolio</a></li>
+                <li><a href="more-about-me.html">About</a></li>
+                <li><a href="#contact-me-form-target">Contact</a></li>
+            </ul>
+            <!--            <ul class="actions vertical">
+                            <li><a href="#" class="button fit special">Get Started</a></li>
+                            <li><a href="#" class="button fit">Log In</a></li>
+                        </ul>-->
+        </nav>
+
+        <!-- Wrapper -->
+        <div id="wrapper">
+
+            <!-- Intro -->
+            <section id="intro" class="wrapper featured style1">
+                <div class="inner">
+                    <span class="image"><img src="images/logo.jpg" alt="" /></span>
+                    <div class="content">
+                        <header>
+                            <h1>Welcome To My Portfolio</h1>
+                            <p>Taking Products From Conception to Fruition</p>
+                        </header>
+                    </div>
+                </div>
+            </section>
+
+            <!-- One -->
+            <section class="wrapper style2 special">
+                <div class="inner">
+                    <header>
+                        <h2>Hi, I'm Shivam</h2>
+                        <p>Technical product manager living in Bangalore.
+                            Passionate about all things technological and always looking 
+                            for ways to make it better.</p>
+                    </header>
+                    <ul class="icons major style2">
+                        <li><span class="icon fa-code"><span class="label">Code</span></span></li><li>
+                            <span class="icon fa-cog"><span class="label">Optimization</span></span></li><li>
+                            <span class="icon fa-superpowers"><span class="label">Database</span></span></li><li>
+                            <span class="icon fa-handshake-o"><span class="label">Unity</span></span></li><li>
+                            <span class="icon fa-users"><span class="label">No I in team</span></span></li>
+                    </ul>
+                    <footer>
+                        <ul class="actions">
+                            <li><a href="more-about-me.html" class="button special">More about me</a></li>
+                        </ul>
+                    </footer>
+                </div>
+            </section>
+
+            <!-- Two -->
+            <section class="wrapper style1 special">
+                <div class="inner">
+                    <header>
+                        <h2 id="Portfolio">Portfolio</h2>
+                        <p>
+                                                       <!-- A remarkable product manager dreams like a unicorn, thinks like 
+                                                        an engineer, attends like a therapist, and leads as a five-star general.   -->
+                                                        As a PM, I always ask myself,
+                            If I were a product manager 
+                            at such-and-such company, how do I make this-and-that better....
+                        </p>
+                    </header>
+                    <section class="spotlight">
+                        <span class="image"><img src="images/Project1.png" alt="Now.gg logo" /></span>
+                        <div class="content">
+                            <header>
+                                <h3>Now.gg | Cloud Gaming Platform</h3>
+                                <a target="_blank" href="https://now.gg">www.now.gg</a>
+                            </header><br />
+                            <p>
+                                Now.gg is a Cloud gaming service, giving gamers from all over the world instant access to their favorite Android games on any device, with the best graphics and performance. No downloads or installations are required on your device.
+                            </p>
+                            
+                        </div>
+                    </section>
+                    <section class="spotlight">
+                        <span class="image"><img src="images/Project3.png" alt="BlueStacks logo" /></span>
+                        <div class="content">
+                            <header>
+                                <h3>BlueStacks 5 | Multi Instance Manager</h3>
+                                <a target="_blank" href="https://facebook.com/">www.bluestacks.com</a>
+                            </header><br />
+                            <p>
+                                BlueStacks (also known as BlueStacks by now.gg, Inc.) is an American technology 
+                                company known for the BlueStacks App Player and other cloud-based cross-platform products. 
+                                The BlueStacks App Player allows Android applications to run on computers running Microsoft Windows or macOS.
+                                The Multi-Instance Manager makes it easy to play your favorite Strategy and Gacha games. 
+                                Optimize your PC for the best performance even with multiple instances running in the background by using 
+                                the 'Eco Mode' feature. 
+                                Create, close, launch and remove instances in batches or arrange them in Grid or diagonal layout.
+                            </p>
+                        
+                        </div>
+                    </section>
+                    <section class="spotlight">
+                        <span class="image"><img src="images/Project2.png" alt="Dell logo" /></span>
+                        <div class="content">
+                            <header>
+                                <h3>Dell Mobile Connect</h3>
+                                <a target="_blank" href="https://dell.com/">www.dell.com</a>
+                            </header><br />
+                            <p>
+                                Dell Mobile Connect (also branded as Alienware Mobile Connect) provides a seamless wireless integration between smartphones 
+                                and Windows 10 PCs, allowing you to perform many normal phone functions directly on your PC. 
+                                Smartphone functions that Dell Mobile Connect allows you to perform on your Windows 10 PC
+                            </p>
+                    
+                        </div>
+                    </section>
+                    <section class="spotlight">
+                        <span class="image"><img src="images/Project4.png" alt="InfiViz logo" /></span>
+                        <div class="content">
+                            <header>
+                                <h3>OSDB: Build Up</h3>
+                                <a target="_blank" href="https://osdesignconsulting.com/">www.osdesignbuild.com</a>
+                            </header><br />
+                            <p>
+                                InfiViz Shots is a mobility component of InfiViz, a flagship visual data 
+                                analytics product of Infilect. InfiViz Shots enables field agents of sales force companies, 
+                                auditing agencies, or CPG organisations to capture high fidelity photos and videos of variety of tasks. 
+                                InfiViz Shots can be used to capture photos and videos in any offline (i.e., physical world) environment to automate visual inspection and auditing processes. It runs on-device intelligent systems to capture and store 
+                                photos and videos in the most appropriate form, format, size, and shape. 
+                                Additionally, InfiViz Shots enables field agents to configure network preferences such that the captured visual data is synced with InfiViz cloud platform on 3G/4G/WiFi networks, as per the configuration.
+                            </p>
+                          
+                        </div>
+                    </section>
+                  
+                    <!--                    <section class="spotlight">
+                                            <span class="image"><img src="images/google-headquarters.png" alt="" /></span>
+                                            <div class="content">
+                                                <header>
+                                                    <h3>Google</h3>
+                                                    <a target="_blank" href="https://www.google.com/">www.google.com</a>
+                                                </header><br />
+                                                <p>Google LLC is an United States based multinational technology company 
+                                                    that specializes in Internet-related services and products, 
+                                                    which include online advertising technologies, a search engine, 
+                                                    cloud computing, software, and hardware.</p>
+                                                <footer>
+                                                    <ul class="actions">
+                                                        <li><a href="google-project.html" class="button">Details</a></li>
+                                                    </ul>
+                                                </footer>
+                                            </div>
+                                        </section>
+                                        <section class="spotlight">
+                                            <span class="image"><img src="images/facebook-hackerway.png" alt="" /></span>
+                                            <div class="content">
+                                                <header>
+                                                    <h3>Facebook: One+</h3>
+                                                    <a target="_blank" href="https://www.facebook.com/">www.facebook.com</a>
+                                                </header><br />
+                                                <p><b>Project One+</b> enables users to connect better according to photos.</p>
+                                                <footer>
+                                                    <ul class="actions">
+                                                        <li><a href="#" class="button">Details</a></li>
+                                                    </ul>
+                                                </footer>
+                                            </div>
+                                        </section>
+                                        <section class="spotlight">
+                                            <span class="image"><img src="images/apple-headquarter.png" alt="" /></span>
+                                            <div class="content">
+                                                <header>
+                                                    <h3>Apple</h3>
+                                                    <a target="_blank" href="https://www.apple.com/">www.apple.com</a>
+                                                </header><br />
+                                                <p>Apple Inc. is an American multinational technology 
+                                                    company headquartered in Cupertino, California, 
+                                                    that designs, develops, and sells consumer electronics, 
+                                                    computer software, and online services.</p>
+                                                <footer>
+                                                    <ul class="actions">
+                                                        <li><a href="" class="button">Details</a></li>
+                                                    </ul>
+                                                </footer>
+                                            </div>
+                                        </section>-->
+                
+                   
+
+            <!-- Three -->
+            <!--            <section class="wrapper style3 special">
+                            <div class="inner">
+                                <header>
+                                    <h2>Amet ullamcorper</h2>
+                                    <p>Aptent taciti sociosqu litora torquent et conubia sed etiam.<br />
+                                        Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam<br />
+                                        turpis mauris, ultricies erat malesuada quis.</p>
+                                </header>
+                                <footer>
+                                    <ul class="actions">
+                                        <li><a href="#" class="button big">Get Started</a></li>
+                                    </ul>
+                                </footer>
+                            </div>
+                        </section>-->
+
+            <!-- Footer -->
+            <section id="footer" class="wrapper split style2">
+                <div class="inner">
+                    <section>
+                        <header>
+                            <h3 id="contact-me-form-target">Love to Hear From You</h3>
+                        </header>
+                        <p>Whether you have questions, feedback or anything in between, I am always 
+                            happy to answer.</p>
+                        <ul class="icons">
+                            <li><a target="_blank" href="https://www.linkedin.com/in/shivam-bajaj-99425278" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                            <li><a target="_blank" href="https://github.com/MechCoder0" class="icon fa-github"><span class="label">GitHub</span></a></li>
+                            <li><a target="_blank" href="https://medium.com/@sbajaj040" class="icon fa-brands fa-medium"><span class="label">Medium</span></a></li>
+                            <li><a target="_blank" href="mailto:sbajaj040@gmail.com" class="icon fas fa-envelope"><span class="label">Email</span></a></li>
+                        </ul>
+                    </section>
+                   
+                </div>
+                <div class="copyright">
+                    <p>&copy; <script>document.write(new Date().getFullYear())</script> Shivam Bajaj</p>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.3.5.1.js"></script>
+        <script src="assets/js/skel.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+        <script src="assets/js/main.js"></script>
+
+    </body>
+</html>
