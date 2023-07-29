@@ -1,0 +1,263 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>from128-Resume</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="icon" href="images/favicon.png">
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-43112646-3"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+
+            gtag('config', 'UA-43112646-3');
+        </script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script>
+            function contact_me() {
+                var data = $("#contact-form :input").serializeArray();
+                data.push({name: 'formType', value: '128 Resume'});
+                $.ajax({
+                    type: "POST",
+                    data: data,
+                    url: "Includes/128-contact-me.php",
+                    timeout: 5000,
+                    success: function (data) {
+                        tmp = JSON.parse(data);
+                        if (tmp.status == '1') {
+                            swal("Awesome!", tmp.message, "success");
+                            $("#contact-form")[0].reset();
+                            return;
+                        } else {
+                            swal({
+                                title: "Error",
+                                text: tmp.message,
+                                icon: "warning"
+                            });
+                            return;
+                        }
+                    }, //end success
+                    error: function (jqXHR, textStatus, errorThrown) {
+                        if (textStatus === "timeout") {
+                            swal("Error", "Server response is taking longer than usual, pleas try again later.",
+                                    "error");
+                        }
+                    }
+                }); //end restroom request ajax
+            }
+        </script>
+        <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+        <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+    </head>
+    <body>
+
+        <!-- Header -->
+        <header id="header">
+            <nav>
+                <ul>
+                    <li><a href="#menu">Menu</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Menu -->
+        <nav id="menu">
+            <h2>Menu</h2>
+            <ul class="links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#portfolio">Portfolio</a></li>
+                <li><a href="index.html#contact-me-form-target">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Wrapper -->
+        <div id="wrapper">
+
+            <!-- Main -->
+            <section class="wrapper style2 special">
+                <div class="inner">
+                    <header class="major">
+                        <h1>About</h1>
+                        <p>Experienced PM with 5 years of success in introducing large scale 
+                            software and hardware projects with full oversight for design, 
+                            development, testing and deployment.</p>
+                    </header>
+                    <span class="image" id="profile-block" style="display:flex; width: fit-content;">
+                        <img id="profile-pic" src="images/profile-pic.png" alt="avatar image" />
+                    </span><br />
+                    <footer>
+                        <ul class="actions">
+                            <li>
+                                <a href="http://spidycodes.vercel.app/files/Shivam_Bajaj_-_PM.pdf" 
+                                   target="_blank" class="button icon fa-download">
+                                    Download R&Eacute;SUM&Eacute;</a>
+                            </li>
+                        </ul>
+                    </footer>
+                </div>
+            </section>
+            <section id="main" class="wrapper style1">
+                <div class="inner">
+                    <header class="major">
+                        <h2>Education</h2>
+                    </header>
+                    <h4><b>National Institute of Technology, Kutukshetra</b></h4>
+                    <p>B.S. Mechanical Engineering. 2017<br />
+                    <header class="major">
+                        <h2>Work Experience</h2>
+                    </header>
+                    <div class="row">
+                        <div class="4u 12u$(medium)">
+                            <h3>Infilect Technologies, Bangalore</h3>
+                            <ul>
+                                <li><i>Product Manager</i></li>
+                                <li><a target="_blank" href="http://www.infilect.com/">www.bluestacks.com</a></li>
+                            </ul>
+                        </div>
+                        <div class="4u 12u$(medium)">
+                            <ul>
+                                <li>Led the life cycle of InfiViz Shots for real-time audits, resulting in a 20% increase in user satisfaction and a 15% increase in revenue.</li>
+                                <li>Revamped photo-taking UX, achieving a 25% increase in user engagement and a 20% reduction in task completion time.</li>
+                                <li>Deploy new features resulting 80% increase in user retention in first quarter
+                                    after launched.</li>
+                                <li>Utilized on-device AI & implemented ML and computer vision technologies with real-time insights and achieving a 30% reduction in processing time.</li>
+                                <li>Galvanized cross-functional teams to deploy versatile reporting dashboards contributing to a 40% boost in revenue generation.</li>
+                                <li>Led iOS and Android SDK development, ensuring seamless integration with clients' tech stacks. Resulted in increased product adoption by 40%.</li>
+                            </ul>
+                        </div>
+                        <div class="4u 12u$(medium)">
+                            <h4>2022 &mdash; Present
+                        </div>
+                    </div><br />
+                    <div class="row">
+                        <div class="4u 12u$(medium)">
+                            <h3>BlueStacks Inc. (Now.gg), Gurgaon</h3>
+                            <ul>
+                                <li><i>Product Manager</i></li>
+                                <li><a target="_blank" href="http://www.bluestacks.com/">www.bluestacks.com</a></li>
+                            </ul>
+                        </div>
+                        <div class="4u 12u$(medium)">
+                            <ul>
+                                <li>Led the development of Cloud Gaming Platform (Now.gg), achieving 10% revenue growth.</li>
+                                <li>Collaborated with Design team to improve the User Experience, improving user adoption by 20%.</li>
+                                <li>Introduced Multi-Instance Manager in BlueStacks 5, driving 13.5% increase in DAU.</li>
+                                <li>Constantly researched support tickets and analyzing the data in order to find issues beforehand, increasing stickiness by 6%.</li>
+                                <li>Developed Chatbot, reducing support response time by 30%.</li>
+                            </ul>
+                        </div>
+                        <div class="4u 12u$(medium)">
+                            <h4>2021 &mdash; 2022
+                        </div>
+                    </div><br />
+                    <div class="row">
+                        <div class="4u 12u$(medium)">
+                            <h3>Dell Technologies</h3>
+                            <ul>
+                                <li><i>Associate Product Consultant</i></li>
+                                <li><a target="_blank" href="http://www.dell.com/">www.dell.com</a></li>
+                            </ul>
+                        </div>
+                        <div class="4u 12u$(medium)">
+                            <ul>
+                                <li>Designed and developed REST APIs using Python and Django frameworks resulting 12% reduction in response time.</li>
+                                <li>Analyzed performance data and identified areas for optimization while improving stability with minimal downtime.</li>
+                                <li>Orchestrated Sales App migration from CLI-based tool to Dell Sales Application, reducing order processing time by 25%.</li>
+                                <li>Automated quotation creation, saving 50% time and improving accuracy by 40%.</li>
+                                <li>Enhanced Global Order Visibility, boosting user satisfaction by 30% and sales by 15%.</li>
+                                <li>Led CRM tool development and Migration to Salesforce, increasing sales productivity by 20%.</li>
+                            </ul>
+                        </div>
+                        <div class="4u 12u$(medium)">
+                            <h4>2018 &mdash; 2021
+                        </div>
+                    </div><br />
+                  
+                    <div class="row">
+                        <div class="4u 12u$(medium)">
+                            <h3>ScrapWrap</h3>
+                            <ul>
+                                <li><i>Co-Founder</i></li>
+                                <li><a target="_blank" href="https://scrapwrap.com/">www.scrapwrap.com</a></li>
+                            </ul>
+                        </div>
+                        <div class="4u 12u$(medium)">
+                            <ul>
+                                <li>Implement product road map and design.</li>
+                                <li>Coordinate with remote team in different parts of the country.</li>
+                                <li>Developed Native Android App.</li>
+                                <li>Implement and design website.</li>
+                                <li>15k+ users.</li>
+                            </ul>
+                        </div>
+                        <div class="4u 12u$(medium)">
+                            <h4>2016
+                        </div>
+                    </div><br />
+                    <header class="major">
+                        <h2>Skills</h2>
+                    </header>
+                    <div class="row">
+                        <div class="3u 12u$(medium)">
+                            <ul>
+                                <li>PM Software: Monday, Jira, Trello, Teambition, Adobe XD, Tableau, Power BI and Aha!.</li>
+                            </ul>
+                        </div>
+                        <div class="3u 12u$(medium)">
+                            <ul>
+                                <li>Full stack web development with JavaScript(Vanilla and React), HTML5 & CSS3, PHP and MySQL.</li>
+                            </ul>
+                        </div>
+                        <div class="3u 12u$(medium)">
+                            <ul>
+                                <li>Data Analysis: Power BI, Google Analytics, Tableau.</li>
+                            </ul>
+                        </div>
+                        <div class="3u 12u$(medium)">
+                            <ul>
+                                <li>Languages: English, Hindi and Punjabi .</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <section id="footer" class="wrapper split style2">
+                <div class="inner">
+                    <section>
+                        <header>
+                            <h3>R&eacute;sum&eacute; Feedback</h3>
+                        </header>
+                        <p>Questions about the r&eacute;sum&eacute;? I am more than happy to help.</p>
+                    
+                        <ul class="icons">
+                            <li><a target="_blank" href="https://www.linkedin.com/in/shivam-bajaj-99425278" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                            <li><a target="_blank" href="https://github.com/MechCoder0" class="icon fa-github"><span class="label">GitHub</span></a></li>
+                            <li><a target="_blank" href="https://medium.com/@sbajaj040" class="icon fa-brands fa-medium"><span class="label">Medium</span></a></li>
+                            <li><a target="_blank" href="mailto:sbajaj040@gmail.com" class="icon fas fa-envelope"><span class="label">Email</span></a></li>
+                        </ul>
+                    </section>
+                </div>
+                <div class="copyright">
+                    <p>&copy; <script>document.write(new Date().getFullYear())</script> Shivam Bajaj</p>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.3.5.1.js"></script>
+        <script src="assets/js/skel.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+        <script src="assets/js/main.js"></script>
+
+    </body>
+</html>
