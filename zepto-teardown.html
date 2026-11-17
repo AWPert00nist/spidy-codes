@@ -7,6 +7,7 @@
         <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
         <link rel="stylesheet" href="assets/css/main.css" />
         <link rel="stylesheet" href="assets/css/case-themes.css?v=2" />
+        <link rel="stylesheet" href="assets/css/zepto-proto.css?v=2" />
         <meta name="theme-color" content="#3A0A6B" />
         <link rel="icon" href="images/favicon.png">
         <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -63,6 +64,7 @@
                         <li><a href="#zepto" class="button">What Zepto does</a></li>
                         <li><a href="#ux" class="button">User experience</a></li>
                         <li><a href="#mockups" class="button">Mockups</a></li>
+                        <li><a href="#prototype" class="button">Prototype</a></li>
                         <li><a href="#improve" class="button">Opportunities</a></li>
                         <li><a href="#metrics" class="button">Metrics</a></li>
                         <li><a href="#sources" class="button">Sources</a></li>
@@ -154,7 +156,34 @@
                 </div>
             </section>
 
-            <section id="improve" class="wrapper style3">
+            <section id="prototype" class="wrapper style3">
+                <div class="inner">
+                    <header class="major"><h2>Try the Prototype</h2><p>A working prototype of the proposed notification controls. Send test campaigns and watch the rules decide what reaches the phone. It runs in your browser with sample data and a simulated clock. It is not Zepto&rsquo;s app, and I have not seen its settings beyond public reports.</p></header>
+                    <div class="zp" id="zp">
+                        <div class="zp-phone" role="group" aria-label="Interactive Zepto notification prototype">
+                            <div class="zp-inner">
+                                <div class="zp-status"><span class="zp-time">9:41 AM</span><span>5G &#9646;&#9646;&#9646;</span></div>
+                                <div class="zp-screen" aria-live="polite"></div>
+                                <div class="zp-nav"></div>
+                                <div class="zp-banner" role="button" tabindex="0" aria-label="Open notification"></div>
+                            </div>
+                        </div>
+                        <div class="zp-side">
+                            <h3>What to try</h3>
+                            <ol class="zp-steps" aria-label="Steps"></ol>
+                            <label class="zp-switch"><input type="checkbox" id="zp-on" checked><i></i> Proposed controls on</label>
+                            <p>Switch off to see today&rsquo;s behaviour as I understand it: everything is delivered, and a sold-out link is a dead end.</p>
+                            <h3>Send a test campaign</h3>
+                            <div class="zp-send" id="zp-send"></div>
+                            <h3>What the rules did</h3>
+                            <ul class="zp-log" id="zp-log" aria-live="polite"></ul>
+                            <p><button type="button" class="zp-restart" id="zp-restart">Restart the prototype</button></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="improve" class="wrapper style1">
                 <div class="inner">
                     <header class="major"><h2>Opportunities</h2><p>My suggestions, not claims about Zepto's roadmap.</p></header>
                     <div class="table-wrapper"><table>
@@ -169,7 +198,7 @@
                 </div>
             </section>
 
-            <section id="metrics" class="wrapper style1">
+            <section id="metrics" class="wrapper style3">
                 <div class="inner">
                     <header class="major"><h2>Metrics</h2></header>
                     <div class="row">
@@ -193,7 +222,7 @@
                 </div>
             </section>
 
-            <section id="sources" class="wrapper style3">
+            <section id="sources" class="wrapper style1">
                 <div class="inner">
                     <header class="major"><h2>Sources</h2></header>
                     <ul>
@@ -225,6 +254,7 @@
         <script src="assets/js/util.js"></script>
         <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
         <script src="assets/js/main.js?v=2"></script>
+        <script src="assets/js/zepto-proto.js?v=2"></script>
 
     </body>
 </html>

@@ -7,6 +7,7 @@
         <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
         <link rel="stylesheet" href="assets/css/main.css" />
         <link rel="stylesheet" href="assets/css/case-themes.css?v=2" />
+        <link rel="stylesheet" href="assets/css/blinkit-proto.css?v=4" />
         <meta name="theme-color" content="#F8CB46" />
         <link rel="icon" href="images/favicon.png">
         <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -62,6 +63,7 @@
                         <li><a href="#users" class="button">Users</a></li>
                         <li><a href="#solutions" class="button">Solutions</a></li>
                         <li><a href="#wireframes" class="button">Wireframes</a></li>
+                        <li><a href="#prototype" class="button">Prototype</a></li>
                         <li><a href="#ice" class="button">Prioritization</a></li>
                         <li><a href="#metrics" class="button">Metrics</a></li>
                         <li><a href="#gtm" class="button">Go-to-market</a></li>
@@ -178,7 +180,29 @@
                 </div>
             </section>
 
-            <section id="ice" class="wrapper style1">
+            <section id="prototype" class="wrapper style1">
+                <div class="inner">
+                    <header class="major"><h2>Try the Prototype</h2><p>A small, working prototype of the top two features. It runs entirely in your browser with sample data. It is not Blinkit&rsquo;s app and nothing you add is uploaded.</p></header>
+                    <div class="bp" id="bp">
+                        <div class="bp-phone" role="group" aria-label="Interactive Blinkit prototype">
+                            <div class="bp-inner">
+                                <div class="bp-status"><span class="bp-time">9:41</span><span>5G &#9646;&#9646;&#9646;</span></div>
+                                <div class="bp-screen" aria-live="polite"></div>
+                            </div>
+                        </div>
+                        <div class="bp-side">
+                            <h3>What to try</h3>
+                            <ol class="bp-steps" aria-label="Steps"></ol>
+                            <label class="bp-switch"><input type="checkbox" id="bp-on" checked><i></i> Proposed features on</label>
+                            <p>Turn the switch off to compare with a plain product list that has no dates, warnings or photo refund.</p>
+                            <p><button type="button" class="bp-restart" id="bp-restart">Restart the prototype</button></p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="ice" class="wrapper style3">
                 <div class="inner">
                     <header class="major"><h2>Prioritization (ICE)</h2></header>
                     <p>ICE = (Impact &times; Confidence) / Effort, each scored 1&ndash;10. <i>These are my own judgement calls, not measured values; a real team would calibrate them with data and engineering input.</i></p>
@@ -194,7 +218,7 @@
                 </div>
             </section>
 
-            <section id="metrics" class="wrapper style3">
+            <section id="metrics" class="wrapper style1">
                 <div class="inner">
                     <header class="major"><h2>Success Metrics</h2></header>
                     <div class="row">
@@ -211,7 +235,7 @@
                 </div>
             </section>
 
-            <section id="gtm" class="wrapper style1">
+            <section id="gtm" class="wrapper style3">
                 <div class="inner">
                     <header class="major"><h2>Go-to-Market &amp; Rollout</h2></header>
                     <div class="row">
@@ -230,7 +254,7 @@
                 </div>
             </section>
 
-            <section id="sources" class="wrapper style3">
+            <section id="sources" class="wrapper style1">
                 <div class="inner">
                     <header class="major"><h2>Sources</h2></header>
                     <ul>
@@ -263,6 +287,7 @@
         <script src="assets/js/util.js"></script>
         <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
         <script src="assets/js/main.js?v=2"></script>
+        <script src="assets/js/blinkit-proto.js?v=2"></script>
 
     </body>
 </html>
