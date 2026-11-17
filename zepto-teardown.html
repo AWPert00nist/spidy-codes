@@ -1,0 +1,220 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Shivam Bajaj | Zepto Product Teardown</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="stylesheet" href="assets/css/case-themes.css" />
+        <meta name="theme-color" content="#3A0A6B" />
+        <link rel="icon" href="images/favicon.png">
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-43112646-3"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+
+            gtag('config', 'UA-43112646-3');
+        </script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+        <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+    </head>
+    <body class="theme-zepto">
+
+        <!-- Header -->
+        <header id="header">
+            <nav>
+                <ul>
+                    <li><a href="#menu">Menu</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Menu -->
+        <nav id="menu">
+            <h2>Menu</h2>
+            <ul class="links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="case-studies.html">Case Studies</a></li>
+                <li><a href="more-about-me.html">About</a></li>
+                <li><a href="index.html#contact-me-form-target">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Wrapper -->
+        <div id="wrapper">
+            <section class="wrapper style2 special">
+                <div class="inner">
+                    <header class="major">
+                        <img class="brand-logo" src="images/logos/zepto.svg" alt="Zepto logo" />
+                        <h1>Zepto: App Notifications Teardown</h1>
+                        <p>A product teardown of push and in-app notifications by Shivam Bajaj. Built only from public sources; I have no access to Zepto's internal data.</p>
+                    </header>
+                    <ul class="actions jump-nav">
+                        <li><a href="#overview" class="button">Overview</a></li>
+                        <li><a href="#push" class="button">Push notifications</a></li>
+                        <li><a href="#zepto" class="button">What Zepto does</a></li>
+                        <li><a href="#ux" class="button">User experience</a></li>
+                        <li><a href="#mockups" class="button">Mockups</a></li>
+                        <li><a href="#improve" class="button">Opportunities</a></li>
+                        <li><a href="#metrics" class="button">Metrics</a></li>
+                        <li><a href="#sources" class="button">Sources</a></li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="overview" class="wrapper style1">
+                <div class="inner">
+                    <header class="major"><h2>Overview</h2></header>
+                    <p>Zepto is an Indian quick-commerce company that delivers groceries and other daily needs from a network of dark stores. In its October 2025 round it raised $450M at a reported $7B valuation (<a target="_blank" href="https://techcrunch.com/2025/10/16/zepto-raises-450-million-at-7-billion-valuation-as-indian-quick-commerce-market-heats-up">TechCrunch</a>).</p>
+                    <div class="row special">
+                        <div class="4u 12u$(medium)"><h2>1,139</h2><p>dark stores as of 31 Mar 2026, per press coverage of its draft IPO filing</p></div>
+                        <div class="4u 12u$(medium)"><h2>66</h2><p>cities, same source</p></div>
+                        <div class="4u 12u$(medium)"><h2>~48M</h2><p>annual transacting users (4.79 crore), same source</p></div>
+                    </div>
+                    <p>Competition is intense: estimated order shares put Blinkit well ahead, and Zepto's monthly-user growth has been reported to slow against Blinkit and Instamart (<a target="_blank" href="https://www.fynd.com/blog/what-instamarts-market-share-drop-reveals-about-quick-commerce">Fynd/Entrackr</a>; <a target="_blank" href="https://www.indmoney.com/blog/ipo/zepto-drhp-analysis-how-it-compares-with-blinkit-and-instamart">IndMoney filing analysis</a>). When growth slows, getting existing customers to come back becomes a bigger lever, and notifications are one of the cheapest ways to do that. Zepto has also been reported to be shifting its retention approach toward fewer discounts and a paid club (<a target="_blank" href="https://inc42.com/features/zeptos-retention-play-fewer-discounts-premium-carts-a-paid-club/">Inc42</a>).</p>
+                    <p><i>Store, city and user figures are as reported by secondary coverage of Zepto's draft IPO filing. Check them against the filing before quoting.</i></p>
+                </div>
+            </section>
+
+            <section id="push" class="wrapper style3">
+                <div class="inner">
+                    <header class="major"><h2>Why Notifications Matter in Quick Commerce</h2></header>
+                    <div class="row">
+                        <div class="6u 12u$(medium)">
+                            <h3>What they do</h3>
+                            <ul>
+                                <li><b>Push notifications</b> reach users outside the app, so they can be timed and tailored. Typical uses are cart reminders, restock reminders and offers.</li>
+                                <li><b>In-app notifications</b> appear while the user is already browsing, such as banners and order-status nudges.</li>
+                                <li>Cart-recovery pushes are widely described as the highest-return use, often sent in a sequence over about a day or more (<a target="_blank" href="https://vennapps.com/blog/push-notifications-for-e-commerce-guide">Venn guide</a>).</li>
+                            </ul>
+                        </div>
+                        <div class="6u 12u$(medium)">
+                            <h3>Benchmarks (use with care)</h3>
+                            <ul>
+                                <li>An India benchmark (MoEngage, 2020, media and entertainment, not grocery) reported a 6.3% push click-through rate, with personalised messages at 6.07% versus 3.67% for non-personalised (<a target="_blank" href="https://info.moengage.com/hubfs/Media%20and%20entertainment%20(OTT)%20push%20notification%20benchmarks,%202020/Media%20&%20Entertainment%20(OTT)%20Push%20Notification%20Benchmarks,%202020%20(INDIA)_final.pdf">MoEngage</a>).</li>
+                                <li>Globally, only slightly more than half of iOS users opt in to push in e-commerce (<a target="_blank" href="https://ha-public.pushwoosh.com/blog/push-notifications-e-commerce">Pushwoosh</a>).</li>
+                                <li>Vendors calculate click-through differently, so benchmarks across vendors are not directly comparable.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="zepto" class="wrapper style1">
+                <div class="inner">
+                    <header class="major"><h2>What Zepto Is Reported to Do</h2></header>
+                    <p>I could only find a few public data points, so this section sticks to those.</p>
+                    <ul>
+                        <li><b>Segmentation by recency.</b> Zepto separated recently active users, since those active in the last seven days responded better to push, and noted it needed a deeper understanding of preferences to personalise content (<a target="_blank" href="https://www.appsflyer.com/customers/zepto/">AppsFlyer case study</a>).</li>
+                        <li><b>Attribution into CRM.</b> It fed campaign attribution data into its internal BI platform to enrich CRM data (same source).</li>
+                        <li><b>Deep linking.</b> It used deep linking to take users from outside the app to the relevant screen (same source).</li>
+                        <li><b>Result.</b> The vendor reports about a 35% lift in remarketing conversions. This is vendor-published, so treat it as indicative.</li>
+                        <li><b>Where it can go wrong.</b> Trade press covered a reported personalisation misfire, raising questions about how far personalised marketing should go (<a target="_blank" href="https://www.exchange4media.com/marketing-news/pushing-too-much-zeptos-i-pill-gaffe-raises-questions-about-personalized-marketing-137953.html">exchange4media</a>).</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="ux" class="wrapper style3">
+                <div class="inner">
+                    <header class="major"><h2>User Experience: Notification to Landing Page</h2>
+                        <p>Illustrative wireframes of the journey. They are not screenshots of Zepto's app, and the copy is placeholder text.</p></header>
+                    <div class="row"><div class="4u 12u$(medium)" style="text-align:center"><svg viewBox="0 0 240 440" role="img" aria-label="Lock screen with three notification types" style="width:100%;max-width:240px;height:auto"><rect x="2" y="2" width="236" height="436" rx="22" fill="#ffffff" stroke="#2b2b2b"/><rect x="90" y="10" width="60" height="6" rx="3" fill="#f1f1f1" stroke="#f1f1f1"/><text x="120" y="60" font-size="30" font-weight="bold" fill="#2b2b2b" text-anchor="middle" font-family="Helvetica,Arial,sans-serif">9:41</text><text x="120" y="82" font-size="11" font-weight="normal" fill="#8a8a8a" text-anchor="middle" font-family="Helvetica,Arial,sans-serif">Tuesday</text><rect x="16" y="110" width="208" height="70" rx="12" fill="#f1e9fb" stroke="#6D28B8"/><rect x="26" y="120" width="16" height="16" rx="4" fill="#8a8a8a" stroke="#8a8a8a"/><text x="50" y="132" font-size="9" font-weight="normal" fill="#8a8a8a" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Quick-commerce app</text><text x="26" y="154" font-size="11" font-weight="bold" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Your cart is waiting</text><text x="26" y="170" font-size="9" font-weight="normal" fill="#8a8a8a" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Milk and 2 more items are still in your cart</text><rect x="16" y="188" width="208" height="70" rx="12" fill="#f1f1f1" stroke="#c9c9c9"/><rect x="26" y="198" width="16" height="16" rx="4" fill="#8a8a8a" stroke="#8a8a8a"/><text x="50" y="210" font-size="9" font-weight="normal" fill="#8a8a8a" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Quick-commerce app</text><text x="26" y="232" font-size="11" font-weight="bold" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Time to restock?</text><text x="26" y="248" font-size="9" font-weight="normal" fill="#8a8a8a" text-anchor="start" font-family="Helvetica,Arial,sans-serif">You usually reorder eggs about now</text><rect x="16" y="266" width="208" height="70" rx="12" fill="#f1f1f1" stroke="#c9c9c9"/><rect x="26" y="276" width="16" height="16" rx="4" fill="#8a8a8a" stroke="#8a8a8a"/><text x="50" y="288" font-size="9" font-weight="normal" fill="#8a8a8a" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Quick-commerce app</text><text x="26" y="310" font-size="11" font-weight="bold" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Offer in your area</text><text x="26" y="326" font-size="9" font-weight="normal" fill="#8a8a8a" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Placeholder offer text</text></svg><p><small>1. Lock screen: three common notification types (cart, restock, offer)</small></p></div><div class="4u 12u$(medium)" style="text-align:center"><svg viewBox="0 0 240 440" role="img" aria-label="Deep-linked landing page: cart" style="width:100%;max-width:240px;height:auto"><rect x="2" y="2" width="236" height="436" rx="22" fill="#ffffff" stroke="#2b2b2b"/><rect x="90" y="10" width="60" height="6" rx="3" fill="#f1f1f1" stroke="#f1f1f1"/><text x="20" y="40" font-size="14" font-weight="normal" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">&#8592;</text><text x="120" y="40" font-size="12" font-weight="bold" fill="#2b2b2b" text-anchor="middle" font-family="Helvetica,Arial,sans-serif">Cart</text><rect x="20" y="58" width="200" height="40" rx="8" fill="#f1e9fb" stroke="#6D28B8"/><text x="30" y="82" font-size="10" font-weight="bold" fill="#6D28B8" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Opened from your reminder</text><rect x="20" y="108" width="200" height="56" rx="8" fill="#ffffff" stroke="#c9c9c9"/><rect x="28" y="116" width="40" height="40" rx="8" fill="#f1f1f1" stroke="#c9c9c9"/><line x1="28" y1="116" x2="68" y2="156" stroke="#c9c9c9"/><line x1="68" y1="116" x2="28" y2="156" stroke="#c9c9c9"/><text x="78" y="132" font-size="11" font-weight="bold" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Milk 500 ml</text><text x="78" y="148" font-size="10" font-weight="normal" fill="#6D28B8" text-anchor="start" font-family="Helvetica,Arial,sans-serif">In stock</text><rect x="20" y="172" width="200" height="56" rx="8" fill="#ffffff" stroke="#c9c9c9"/><rect x="28" y="180" width="40" height="40" rx="8" fill="#f1f1f1" stroke="#c9c9c9"/><line x1="28" y1="180" x2="68" y2="220" stroke="#c9c9c9"/><line x1="68" y1="180" x2="28" y2="220" stroke="#c9c9c9"/><text x="78" y="196" font-size="11" font-weight="bold" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Item 2</text><text x="78" y="212" font-size="10" font-weight="normal" fill="#6D28B8" text-anchor="start" font-family="Helvetica,Arial,sans-serif">In stock</text><text x="20" y="262" font-size="11" font-weight="bold" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Total, all-in</text><text x="220" y="262" font-size="11" font-weight="bold" fill="#2b2b2b" text-anchor="end" font-family="Helvetica,Arial,sans-serif">&#8377; xx</text><rect x="20" y="390" width="200" height="30" rx="15" fill="#2b2b2b" stroke="#2b2b2b"/><text x="120.0" y="410" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle" font-family="Helvetica,Arial,sans-serif">Checkout</text></svg><p><small>2. Deep link opens the cart directly with items in stock, not the home screen</small></p></div><div class="4u 12u$(medium)" style="text-align:center"><svg viewBox="0 0 240 440" role="img" aria-label="Proposed notification preference centre" style="width:100%;max-width:240px;height:auto"><rect x="2" y="2" width="236" height="436" rx="22" fill="#ffffff" stroke="#2b2b2b"/><rect x="90" y="10" width="60" height="6" rx="3" fill="#f1f1f1" stroke="#f1f1f1"/><text x="20" y="40" font-size="14" font-weight="normal" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">&#8592;</text><text x="120" y="40" font-size="12" font-weight="bold" fill="#2b2b2b" text-anchor="middle" font-family="Helvetica,Arial,sans-serif">Notifications</text><text x="20" y="76" font-size="11" font-weight="bold" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Order updates</text><text x="20" y="92" font-size="10" font-weight="normal" fill="#8a8a8a" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Always on</text><rect x="176" y="68" width="44" height="22" rx="11" fill="#6D28B8" stroke="#6D28B8"/><text x="20" y="128" font-size="11" font-weight="bold" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Cart reminders</text><text x="20" y="144" font-size="10" font-weight="normal" fill="#8a8a8a" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Max 1 per day</text><rect x="176" y="120" width="44" height="22" rx="11" fill="#6D28B8" stroke="#6D28B8"/><text x="20" y="180" font-size="11" font-weight="bold" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Restock suggestions</text><text x="20" y="196" font-size="10" font-weight="normal" fill="#8a8a8a" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Weekly</text><rect x="176" y="172" width="44" height="22" rx="11" fill="#6D28B8" stroke="#6D28B8"/><text x="20" y="232" font-size="11" font-weight="bold" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Offers &amp; promotions</text><text x="20" y="248" font-size="10" font-weight="normal" fill="#8a8a8a" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Off</text><rect x="176" y="224" width="44" height="22" rx="11" fill="#f1f1f1" stroke="#c9c9c9"/><text x="20" y="290" font-size="11" font-weight="bold" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Quiet hours</text><rect x="20" y="300" width="200" height="34" rx="8" fill="#ffffff" stroke="#c9c9c9"/><text x="30" y="322" font-size="11" font-weight="normal" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">10 pm &#8211; 8 am</text><rect x="20" y="390" width="200" height="30" rx="15" fill="#2b2b2b" stroke="#2b2b2b"/><text x="120.0" y="410" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle" font-family="Helvetica,Arial,sans-serif">Save</text></svg><p><small>3. Proposed: a preference centre with frequency caps and quiet hours</small></p></div></div>
+                    <h3>What a good journey needs</h3>
+                    <ol>
+                        <li><b>Right segment:</b> send to users likely to act, such as recently active ones.</li>
+                        <li><b>Right content:</b> reference something the user did, such as their own cart, and avoid sensitive categories.</li>
+                        <li><b>Right timing:</b> respect time-of-day patterns and a daily and weekly cap.</li>
+                        <li><b>Right destination:</b> deep link to the exact screen, with live stock and price.</li>
+                    </ol>
+                </div>
+            </section>
+
+            <section id="mockups" class="wrapper style3">
+                <div class="inner">
+                    <header class="major"><h2>Proposed Mockups</h2>
+                        <p>Three screens for the opportunities below. Illustrative layouts with placeholder copy, not Zepto's design.</p></header>
+                    <div class="row"><div class="4u 12u$(medium)" style="text-align:center"><svg viewBox="0 0 240 440" role="img" aria-label="Value-first notification permission prompt" style="width:100%;max-width:240px;height:auto"><rect x="2" y="2" width="236" height="436" rx="22" fill="#ffffff" stroke="#2b2b2b"/><rect x="90" y="10" width="60" height="6" rx="3" fill="#f1f1f1" stroke="#f1f1f1"/><text x="120" y="40" font-size="13" font-weight="bold" fill="#2b2b2b" text-anchor="middle" font-family="Helvetica,Arial,sans-serif">Stay in the loop</text><rect x="60" y="70" width="120" height="120" rx="16" fill="#f1f1f1" stroke="#c9c9c9"/><circle cx="120" cy="130" r="30" fill="#f1e9fb" stroke="#6D28B8"/><path d="M108 136 q12 -34 24 0 z M116 142 q4 6 8 0" fill="none" stroke="#6D28B8" stroke-width="3" stroke-linecap="round"/><text x="120" y="222" font-size="13" font-weight="bold" fill="#2b2b2b" text-anchor="middle" font-family="Helvetica,Arial,sans-serif">Get what matters</text><text x="120" y="244" font-size="10" font-weight="normal" fill="#8a8a8a" text-anchor="middle" font-family="Helvetica,Arial,sans-serif">Order status, delivery updates</text><text x="120" y="260" font-size="10" font-weight="normal" fill="#8a8a8a" text-anchor="middle" font-family="Helvetica,Arial,sans-serif">and reminders you choose.</text><rect x="30" y="282" width="180" height="56" rx="8" fill="#ffffff" stroke="#c9c9c9"/><text x="42" y="304" font-size="10" font-weight="normal" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">&#10003; Order updates</text><text x="42" y="322" font-size="10" font-weight="normal" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">&#10003; Cart reminders (max 1 a day)</text><rect x="20" y="360" width="200" height="30" rx="15" fill="#2b2b2b" stroke="#2b2b2b"/><text x="120.0" y="380" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle" font-family="Helvetica,Arial,sans-serif">Turn on notifications</text><text x="120" y="412" font-size="11" font-weight="normal" fill="#8a8a8a" text-anchor="middle" font-family="Helvetica,Arial,sans-serif">Not now</text></svg><p><small>Value-first permission prompt: explains what the user will get before the system dialog, aimed at opt-in rate</small></p></div><div class="4u 12u$(medium)" style="text-align:center"><svg viewBox="0 0 240 440" role="img" aria-label="In-app notification inbox grouped by category" style="width:100%;max-width:240px;height:auto"><rect x="2" y="2" width="236" height="436" rx="22" fill="#ffffff" stroke="#2b2b2b"/><rect x="90" y="10" width="60" height="6" rx="3" fill="#f1f1f1" stroke="#f1f1f1"/><text x="20" y="40" font-size="14" font-weight="normal" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">&#8592;</text><text x="120" y="40" font-size="12" font-weight="bold" fill="#2b2b2b" text-anchor="middle" font-family="Helvetica,Arial,sans-serif">Inbox</text><rect x="20" y="56" width="56" height="24" rx="12" fill="#2b2b2b" stroke="#2b2b2b"/><text x="48" y="72" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle" font-family="Helvetica,Arial,sans-serif">All</text><rect x="82" y="56" width="66" height="24" rx="12" fill="#ffffff" stroke="#c9c9c9"/><text x="115" y="72" font-size="10" font-weight="normal" fill="#2b2b2b" text-anchor="middle" font-family="Helvetica,Arial,sans-serif">Orders</text><rect x="154" y="56" width="66" height="24" rx="12" fill="#ffffff" stroke="#c9c9c9"/><text x="187" y="72" font-size="10" font-weight="normal" fill="#2b2b2b" text-anchor="middle" font-family="Helvetica,Arial,sans-serif">Offers</text><rect x="20" y="96" width="200" height="60" rx="8" fill="#ffffff" stroke="#c9c9c9"/><rect x="28" y="108" width="10" height="10" rx="5" fill="#6D28B8" stroke="#6D28B8"/><text x="46" y="118" font-size="11" font-weight="bold" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Order on the way</text><text x="46" y="136" font-size="10" font-weight="normal" fill="#8a8a8a" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Arriving soon</text><text x="212" y="118" font-size="9" font-weight="normal" fill="#8a8a8a" text-anchor="end" font-family="Helvetica,Arial,sans-serif">2m</text><rect x="20" y="164" width="200" height="60" rx="8" fill="#ffffff" stroke="#c9c9c9"/><text x="46" y="186" font-size="11" font-weight="bold" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Items still in your cart</text><text x="46" y="204" font-size="10" font-weight="normal" fill="#8a8a8a" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Tap to continue</text><text x="212" y="186" font-size="9" font-weight="normal" fill="#8a8a8a" text-anchor="end" font-family="Helvetica,Arial,sans-serif">1h</text><rect x="20" y="232" width="200" height="60" rx="8" fill="#f1f1f1" stroke="#c9c9c9"/><text x="46" y="254" font-size="11" font-weight="bold" fill="#8a8a8a" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Weekly restock idea</text><text x="46" y="272" font-size="10" font-weight="normal" fill="#8a8a8a" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Read</text><text x="212" y="254" font-size="9" font-weight="normal" fill="#8a8a8a" text-anchor="end" font-family="Helvetica,Arial,sans-serif">1d</text><text x="120" y="330" font-size="11" font-weight="bold" fill="#2b2b2b" text-anchor="middle" font-family="Helvetica,Arial,sans-serif">Manage notifications</text></svg><p><small>In-app inbox grouped by category, so missed pushes can still be found</small></p></div><div class="4u 12u$(medium)" style="text-align:center"><svg viewBox="0 0 240 440" role="img" aria-label="Deep link with out-of-stock fallback" style="width:100%;max-width:240px;height:auto"><rect x="2" y="2" width="236" height="436" rx="22" fill="#ffffff" stroke="#2b2b2b"/><rect x="90" y="10" width="60" height="6" rx="3" fill="#f1f1f1" stroke="#f1f1f1"/><text x="20" y="40" font-size="14" font-weight="normal" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">&#8592;</text><text x="120" y="40" font-size="12" font-weight="bold" fill="#2b2b2b" text-anchor="middle" font-family="Helvetica,Arial,sans-serif">Cart</text><rect x="20" y="58" width="200" height="40" rx="8" fill="#fdf0dc" stroke="#b25e00"/><text x="30" y="82" font-size="10" font-weight="bold" fill="#b25e00" text-anchor="start" font-family="Helvetica,Arial,sans-serif">One item sold out at your store</text><rect x="20" y="108" width="200" height="56" rx="8" fill="#ffffff" stroke="#c9c9c9"/><rect x="28" y="116" width="40" height="40" rx="8" fill="#f1f1f1" stroke="#c9c9c9"/><line x1="28" y1="116" x2="68" y2="156" stroke="#c9c9c9"/><line x1="68" y1="116" x2="28" y2="156" stroke="#c9c9c9"/><text x="78" y="132" font-size="11" font-weight="bold" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Milk 500 ml</text><text x="78" y="148" font-size="10" font-weight="normal" fill="#6D28B8" text-anchor="start" font-family="Helvetica,Arial,sans-serif">In stock</text><rect x="20" y="172" width="200" height="84" rx="8" fill="#ffffff" stroke="#b25e00"/><rect x="28" y="180" width="40" height="40" rx="8" fill="#f1f1f1" stroke="#c9c9c9"/><line x1="28" y1="180" x2="68" y2="220" stroke="#c9c9c9"/><line x1="68" y1="180" x2="28" y2="220" stroke="#c9c9c9"/><text x="78" y="196" font-size="11" font-weight="bold" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Item 2</text><text x="78" y="212" font-size="10" font-weight="bold" fill="#b25e00" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Sold out</text><rect x="28" y="226" width="92" height="22" rx="11" fill="#ffffff" stroke="#2b2b2b"/><text x="74" y="241" font-size="10" font-weight="bold" fill="#2b2b2b" text-anchor="middle" font-family="Helvetica,Arial,sans-serif">See similar</text><rect x="126" y="226" width="86" height="22" rx="11" fill="#ffffff" stroke="#c9c9c9"/><text x="169" y="241" font-size="10" font-weight="normal" fill="#2b2b2b" text-anchor="middle" font-family="Helvetica,Arial,sans-serif">Remove</text><rect x="20" y="390" width="200" height="30" rx="15" fill="#2b2b2b" stroke="#2b2b2b"/><text x="120.0" y="410" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle" font-family="Helvetica,Arial,sans-serif">Checkout</text></svg><p><small>Deep link with live stock check and a clear fallback when an item is sold out</small></p></div></div>
+                </div>
+            </section>
+
+            <section id="improve" class="wrapper style1">
+                <div class="inner">
+                    <header class="major"><h2>Opportunities</h2><p>My suggestions, not claims about Zepto's roadmap.</p></header>
+                    <div class="table-wrapper"><table>
+                        <thead><tr><th>Idea</th><th>Why</th><th>Risk to watch</th></tr></thead>
+                        <tbody>
+                            <tr><td>Notification preference centre by category, with quiet hours</td><td>Gives users control and reduces blanket opt-outs</td><td>Fewer promotional impressions; offset by better opt-in retention</td></tr>
+                            <tr><td>Daily and weekly frequency caps across all campaigns</td><td>Prevents several teams stacking messages on one user</td><td>Needs a central send-orchestration layer</td></tr>
+                            <tr><td>Sensitive-category exclusion rules</td><td>Personalisation misfires hurt trust more than they help conversion</td><td>Rules must be reviewed regularly</td></tr>
+                            <tr><td>Deep link with live stock check</td><td>Avoids sending users to an item that is out of stock at their store</td><td>Extra latency on tap</td></tr>
+                            <tr><td>Holdout groups to measure true lift</td><td>Shows whether pushes cause orders or just claim orders that would have happened</td><td>Short-term revenue left on the table</td></tr>
+                        </tbody></table></div>
+                </div>
+            </section>
+
+            <section id="metrics" class="wrapper style3">
+                <div class="inner">
+                    <header class="major"><h2>Metrics</h2></header>
+                    <div class="row">
+                        <div class="4u 12u$(medium)"><h3>Funnel</h3><ul>
+                            <li>Delivered rate = delivered / sent</li>
+                            <li>View rate = viewed / delivered</li>
+                            <li>Click-through rate = clicked / viewed</li>
+                            <li>Add-to-cart rate within a short window after a click</li>
+                            <li>Conversion to order within 24 hours</li></ul></div>
+                        <div class="4u 12u$(medium)"><h3>Quality</h3><ul>
+                            <li>Time on the landing screen after a tap</li>
+                            <li>Share of users who tap zero notifications in a day or week</li>
+                            <li>Clicks per notification received, per user per day and week</li>
+                            <li>Incremental orders versus a holdout group</li></ul></div>
+                        <div class="4u 12u$(medium)"><h3>Guardrails</h3><ul>
+                            <li>Opt-out and uninstall rate after a send</li>
+                            <li>Notification permission opt-in rate</li>
+                            <li>Complaints or negative feedback mentioning notifications</li>
+                            <li>Revenue per message, to track send cost against return</li></ul></div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="sources" class="wrapper style1">
+                <div class="inner">
+                    <header class="major"><h2>Sources</h2></header>
+                    <ul>
+                        <li><a target="_blank" href="https://www.appsflyer.com/customers/zepto/">https://www.appsflyer.com/customers/zepto/</a></li>
+                        <li><a target="_blank" href="https://www.exchange4media.com/marketing-news/pushing-too-much-zeptos-i-pill-gaffe-raises-questions-about-personalized-marketing-137953.html">https://www.exchange4media.com/marketing-news/pushing-too-much-zeptos-i-pill-gaffe-raises-questions-about-personalized-marketing-137953.html</a></li>
+                        <li><a target="_blank" href="https://techcrunch.com/2025/10/16/zepto-raises-450-million-at-7-billion-valuation-as-indian-quick-commerce-market-heats-up">https://techcrunch.com/2025/10/16/zepto-raises-450-million-at-7-billion-valuation-as-indian-quick-commerce-market-heats-up</a></li>
+                        <li><a target="_blank" href="https://www.indmoney.com/blog/ipo/zepto-drhp-analysis-how-it-compares-with-blinkit-and-instamart">https://www.indmoney.com/blog/ipo/zepto-drhp-analysis-how-it-compares-with-blinkit-and-instamart</a></li>
+                        <li><a target="_blank" href="https://inc42.com/features/zeptos-retention-play-fewer-discounts-premium-carts-a-paid-club/">https://inc42.com/features/zeptos-retention-play-fewer-discounts-premium-carts-a-paid-club/</a></li>
+                        <li><a target="_blank" href="https://info.moengage.com/hubfs/Media%20and%20entertainment%20(OTT)%20push%20notification%20benchmarks,%202020/Media%20&%20Entertainment%20(OTT)%20Push%20Notification%20Benchmarks,%202020%20(INDIA)_final.pdf">https://info.moengage.com/hubfs/Media%20and%20entertainment%20(OTT)%20push%20notification%20benchmarks,%202020/Media%20&%20Entertainment%20(OTT)%20Push%20Notification%20Benchmarks,%202020%20(INDIA)_final.pdf</a></li>
+                        <li><a target="_blank" href="https://ha-public.pushwoosh.com/blog/push-notifications-e-commerce">https://ha-public.pushwoosh.com/blog/push-notifications-e-commerce</a></li>
+                        <li><a target="_blank" href="https://vennapps.com/blog/push-notifications-for-e-commerce-guide">https://vennapps.com/blog/push-notifications-for-e-commerce-guide</a></li>
+                        <li><a target="_blank" href="https://www.fynd.com/blog/what-instamarts-market-share-drop-reveals-about-quick-commerce">https://www.fynd.com/blog/what-instamarts-market-share-drop-reveals-about-quick-commerce</a></li>
+                    </ul>
+                    <p><i>Independent teardown. Not affiliated with Zepto. Figures from vendors and secondary press coverage should be verified before reuse.</i></p>
+                    <ul class="actions"><li><a href="case-studies.html" class="button">&larr; All case studies</a></li></ul>
+                </div>
+            </section>
+            <!-- Footer -->
+            <section id="footer" class="wrapper split style2">
+                <div class="copyright">
+                    <p>&copy; <script>document.write(new Date().getFullYear())</script> Shivam Bajaj</p>
+                </div>
+            </section>
+        </div>
+
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.3.5.1.js"></script>
+        <script src="assets/js/skel.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+        <script src="assets/js/main.js"></script>
+
+    </body>
+</html>
