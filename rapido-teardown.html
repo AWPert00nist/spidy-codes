@@ -1,0 +1,194 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Shivam Bajaj | Rapido Product Teardown</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="stylesheet" href="assets/css/case-themes.css" />
+        <meta name="theme-color" content="#FFD400" />
+        <link rel="icon" href="images/favicon.png">
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-43112646-3"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+
+            gtag('config', 'UA-43112646-3');
+        </script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+        <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+    </head>
+    <body class="theme-rapido">
+
+        <!-- Header -->
+        <header id="header">
+            <nav>
+                <ul>
+                    <li><a href="#menu">Menu</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Menu -->
+        <nav id="menu">
+            <h2>Menu</h2>
+            <ul class="links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="case-studies.html">Case Studies</a></li>
+                <li><a href="more-about-me.html">About</a></li>
+                <li><a href="index.html#contact-me-form-target">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Wrapper -->
+        <div id="wrapper">
+            <section class="wrapper style2 special">
+                <div class="inner">
+                    <header class="major">
+                        <img class="brand-logo" src="images/logos/rapido.svg" alt="Rapido logo" />
+                        <h1>Rapido: Ride Booking Teardown</h1>
+                        <p>A feature teardown of Rapido's booking flow by Shivam Bajaj. Built only from public sources; I have no access to Rapido's internal data.</p>
+                    </header>
+                    <ul class="actions jump-nav">
+                        <li><a href="#overview" class="button">Overview</a></li>
+                        <li><a href="#personas" class="button">Personas</a></li>
+                        <li><a href="#journey" class="button">Journey map</a></li>
+                        <li><a href="#ux" class="button">UX elements</a></li>
+                        <li><a href="#features" class="button">Feature ideas</a></li>
+                        <li><a href="#bmc" class="button">Business model</a></li>
+                        <li><a href="#metrics" class="button">Metrics</a></li>
+                        <li><a href="#sources" class="button">Sources</a></li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="overview" class="wrapper style1">
+                <div class="inner">
+                    <header class="major"><h2>Overview</h2></header>
+                    <p>Rapido is an Indian ride-hailing platform that started with bike taxis and now offers autos and cabs. Its pitch to captains (drivers) is a low-cost alternative to the 20&ndash;30% cuts typical of the category, using a subscription model for autos and cabs (<a target="_blank" href="https://www.outlookbusiness.com/interviews/we-dont-want-to-squeeze-our-driver-partners-with-20-30-cuts-rapidos-guntupalli">Outlook Business interview</a>). It was reported to lead rivals with about 16.5 lakh daily rides (<a target="_blank" href="https://www.outlookbusiness.com/magazine/rapido-flips-the-formula-of-indias-consumer-tech-unicorns-to-disrupt-the-uber-ola-duopoly">Outlook Business</a>).</p>
+                    <p><b>Feature in focus:</b> booking a ride, from opening the app to a captain being on the way. This is where a rider decides whether the app can be trusted.</p>
+                    <p><i>Valuation and ride-volume figures vary across sources, so I use only what the cited articles state.</i></p>
+                </div>
+            </section>
+
+            <section id="personas" class="wrapper style3">
+                <div class="inner">
+                    <header class="major"><h2>Personas</h2><p>Illustrative archetypes based on public complaints, not real individuals.</p></header>
+                    <div class="row">
+<div class="4u 12u$(medium)"><h3>The daily commuter</h3><p><b>Who:</b> Office-goer in a metro who books a ride to work every day</p><p><b>Goals:</b> Reach on time at a predictable price</p><p><b>Pain points:</b> Cannot get a ride in peak hours; captains cancel after seeing the drop (<a target="_blank" href="https://theprint.in/india/drivers-cancelling-rides-top-issue-for-79-of-taxi-app-users-survey-finds/905765">ThePrint</a>)</p></div><div class="4u 12u$(medium)"><h3>The impromptu rider</h3><p><b>Who:</b> Young professional with last-minute plans, often late evening</p><p><b>Goals:</b> Book fast and pay by UPI</p><p><b>Pain points:</b> Unsure whether the captain will cancel; trouble at odd hours or when paying digitally (<a target="_blank" href="https://www.businesstoday.in/latest/story/drivers-cancelling-ride-after-knowing-destination-main-concern-for-users-report-329045-2022-04-07">Business Today</a>)</p></div><div class="4u 12u$(medium)"><h3>The budget last-mile rider</h3><p><b>Who:</b> Student or shift worker using a bike or auto for short hops</p><p><b>Goals:</b> Lowest fare for a short trip</p><p><b>Pain points:</b> Fare changes or extra money demanded outside the app (<a target="_blank" href="https://www.freepressjournal.in/amp/pune/pay-by-meter-or-cancel-ola-uber-rapido-auto-drivers-harass-pune-commuters">Free Press Journal</a>)</p></div>                    </div>
+                    <p>Cancellations are the recurring theme. LocalCircles surveys put driver cancellations at the top of app-taxi grievances, with the share varying by survey (reported as 79% in one release) (<a target="_blank" href="https://theprint.in/india/drivers-cancelling-rides-top-issue-for-79-of-taxi-app-users-survey-finds/905765">ThePrint</a>; <a target="_blank" href="https://www.deccanherald.com/amp/story/india%2Fkarnataka%2Fbengaluru%2Fride-hailing-woes-cancellations-surcharges-top-consumer-grievances-2-3163446">Deccan Herald</a>). These surveys cover app taxis in general, not Rapido alone.</p>
+                </div>
+            </section>
+
+            <section id="journey" class="wrapper style1">
+                <div class="inner">
+                    <header class="major"><h2>User Journey Map</h2><p>My reading of the booking flow. Pain points come from the public sources above, plus a reported app outage (<a target="_blank" href="https://yourstory.com/2026/08/rapido-faces-app-outage-as-ride-booking-issue-hit-users">YourStory</a>).</p></header>
+                    <div class="table-wrapper"><table><thead><tr><th></th><th>Launch app</th><th>Enter location</th><th>Select ride</th><th>Book</th><th>Track &amp; review</th></tr></thead><tbody><tr><td><b>Goal</b></td><td>Get a ride quickly</td><td>Set pickup and drop</td><td>Pick the right mode and price</td><td>Confirm and pay</td><td>Know the ride is coming and rate it</td></tr><tr><td><b>Action</b></td><td>Opens app, location detected</td><td>Types drop, adjusts pin</td><td>Compares bike, auto, cab</td><td>Chooses payment, taps Book</td><td>Watches captain approach, shares trip</td></tr><tr><td><b>Feeling</b></td><td>Hopeful</td><td>Neutral</td><td>Careful about price</td><td>Anxious: will anyone accept?</td><td>Relieved, or frustrated if cancelled</td></tr><tr><td><b>Pain point</b></td><td>App slow in peak hours or during outages</td><td>Wrong pin or drop</td><td>Unclear which option arrives soonest</td><td>Captain cancels after seeing drop or payment</td><td>Fare differs from app, rating skipped</td></tr><tr><td><b>Idea</b></td><td>Resilient app, fast first load</td><td>Nudge to confirm pickup pin</td><td>Show pickup time per option and a confidence level</td><td>Automatic priority re-match, no fee on captain cancel</td><td>Allow rating after the ride, with fare breakdown</td></tr></tbody></table></div>
+                </div>
+            </section>
+
+            <section id="ux" class="wrapper style3">
+                <div class="inner">
+                    <header class="major"><h2>UX Elements</h2>
+                        <p>Illustrative wireframes of the booking flow. They are not screenshots of Rapido's app, and screens 3 and 4 include my proposed changes. All copy and amounts are placeholders.</p></header>
+                    <div class="row"><div class="3u 6u$(medium) 12u$(small)" style="text-align:center"><svg viewBox="0 0 240 440" role="img" aria-label="Home with Where to search and ride types" style="width:100%;max-width:240px;height:auto"><rect x="2" y="2" width="236" height="436" rx="22" fill="#ffffff" stroke="#2b2b2b"/><rect x="90" y="10" width="60" height="6" rx="3" fill="#f1f1f1" stroke="#f1f1f1"/><rect x="10" y="28" width="220" height="230" rx="10" fill="#f1f1f1" stroke="#c9c9c9"/><text x="120" y="150" font-size="12" font-weight="normal" fill="#8a8a8a" text-anchor="middle" font-family="Helvetica,Arial,sans-serif">Map</text><circle cx="120" cy="120" r="7" fill="#111111"/><rect x="20" y="214" width="200" height="36" rx="18" fill="#ffffff" stroke="#2b2b2b"/><text x="36" y="237" font-size="12" font-weight="bold" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Where to?</text><rect x="20" y="272" width="60" height="24" rx="12" fill="#fff6c9" stroke="#111111"/><text x="50.0" y="288" font-size="10" font-weight="bold" fill="#111111" text-anchor="middle" font-family="Helvetica,Arial,sans-serif">Bike</text><rect x="86" y="272" width="60" height="24" rx="12" fill="#ffffff" stroke="#c9c9c9"/><text x="116.0" y="288" font-size="10" font-weight="normal" fill="#2b2b2b" text-anchor="middle" font-family="Helvetica,Arial,sans-serif">Auto</text><rect x="152" y="272" width="60" height="24" rx="12" fill="#ffffff" stroke="#c9c9c9"/><text x="182.0" y="288" font-size="10" font-weight="normal" fill="#2b2b2b" text-anchor="middle" font-family="Helvetica,Arial,sans-serif">Cab</text><text x="20" y="324" font-size="10" font-weight="bold" fill="#8a8a8a" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Recent</text><rect x="20" y="334" width="200" height="1" rx="0" fill="#c9c9c9" stroke="#c9c9c9"/><text x="20" y="356" font-size="11" font-weight="normal" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Home</text><rect x="20" y="366" width="200" height="1" rx="0" fill="#c9c9c9" stroke="#c9c9c9"/><text x="20" y="388" font-size="11" font-weight="normal" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Office</text></svg><p><small>1. Home: a clear &ldquo;Where to?&rdquo; field and ride-type choice</small></p></div><div class="3u 6u$(medium) 12u$(small)" style="text-align:center"><svg viewBox="0 0 240 440" role="img" aria-label="Choose ride type with price and pickup time" style="width:100%;max-width:240px;height:auto"><rect x="2" y="2" width="236" height="436" rx="22" fill="#ffffff" stroke="#2b2b2b"/><rect x="90" y="10" width="60" height="6" rx="3" fill="#f1f1f1" stroke="#f1f1f1"/><text x="20" y="40" font-size="14" font-weight="normal" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">&#8592;</text><text x="120" y="40" font-size="12" font-weight="bold" fill="#2b2b2b" text-anchor="middle" font-family="Helvetica,Arial,sans-serif">Choose a ride</text><rect x="20" y="58" width="200" height="54" rx="8" fill="#fff6c9" stroke="#111111"/><rect x="28" y="66" width="36" height="36" rx="8" fill="#f1f1f1" stroke="#c9c9c9"/><line x1="28" y1="66" x2="64" y2="102" stroke="#c9c9c9"/><line x1="64" y1="66" x2="28" y2="102" stroke="#c9c9c9"/><text x="74" y="82" font-size="11" font-weight="bold" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Bike</text><text x="74" y="98" font-size="9" font-weight="normal" fill="#8a8a8a" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Pickup in 3 min</text><text x="212" y="82" font-size="11" font-weight="bold" fill="#2b2b2b" text-anchor="end" font-family="Helvetica,Arial,sans-serif">&#8377; xx</text><rect x="20" y="120" width="200" height="54" rx="8" fill="#ffffff" stroke="#c9c9c9"/><rect x="28" y="128" width="36" height="36" rx="8" fill="#f1f1f1" stroke="#c9c9c9"/><line x1="28" y1="128" x2="64" y2="164" stroke="#c9c9c9"/><line x1="64" y1="128" x2="28" y2="164" stroke="#c9c9c9"/><text x="74" y="144" font-size="11" font-weight="bold" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Auto</text><text x="74" y="160" font-size="9" font-weight="normal" fill="#8a8a8a" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Pickup in 5 min</text><text x="212" y="144" font-size="11" font-weight="bold" fill="#2b2b2b" text-anchor="end" font-family="Helvetica,Arial,sans-serif">&#8377; xx</text><rect x="20" y="182" width="200" height="54" rx="8" fill="#ffffff" stroke="#c9c9c9"/><rect x="28" y="190" width="36" height="36" rx="8" fill="#f1f1f1" stroke="#c9c9c9"/><line x1="28" y1="190" x2="64" y2="226" stroke="#c9c9c9"/><line x1="64" y1="190" x2="28" y2="226" stroke="#c9c9c9"/><text x="74" y="206" font-size="11" font-weight="bold" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Cab</text><text x="74" y="222" font-size="9" font-weight="normal" fill="#8a8a8a" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Pickup in 7 min</text><text x="212" y="206" font-size="11" font-weight="bold" fill="#2b2b2b" text-anchor="end" font-family="Helvetica,Arial,sans-serif">&#8377; xx</text><rect x="20" y="250" width="200" height="50" rx="8" fill="#fdf0dc" stroke="#b25e00"/><text x="30" y="270" font-size="10" font-weight="normal" fill="#b25e00" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Captain sees your drop and</text><text x="30" y="286" font-size="10" font-weight="normal" fill="#b25e00" text-anchor="start" font-family="Helvetica,Arial,sans-serif">payment mode before accepting</text><rect x="20" y="316" width="200" height="34" rx="8" fill="#ffffff" stroke="#c9c9c9"/><text x="32" y="338" font-size="11" font-weight="normal" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Pay with UPI  &#9662;</text><rect x="20" y="390" width="200" height="30" rx="15" fill="#2b2b2b" stroke="#2b2b2b"/><text x="120.0" y="410" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle" font-family="Helvetica,Arial,sans-serif">Book Bike</text></svg><p><small>2. Choose a ride: pickup time per option, and a note that the captain sees the drop and payment mode</small></p></div><div class="3u 6u$(medium) 12u$(small)" style="text-align:center"><svg viewBox="0 0 240 440" role="img" aria-label="Finding a captain with live status" style="width:100%;max-width:240px;height:auto"><rect x="2" y="2" width="236" height="436" rx="22" fill="#ffffff" stroke="#2b2b2b"/><rect x="90" y="10" width="60" height="6" rx="3" fill="#f1f1f1" stroke="#f1f1f1"/><text x="20" y="40" font-size="14" font-weight="normal" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">&#8592;</text><text x="120" y="40" font-size="12" font-weight="bold" fill="#2b2b2b" text-anchor="middle" font-family="Helvetica,Arial,sans-serif">Finding your captain</text><rect x="10" y="56" width="220" height="130" rx="10" fill="#f1f1f1" stroke="#c9c9c9"/><text x="120" y="126" font-size="12" font-weight="normal" fill="#8a8a8a" text-anchor="middle" font-family="Helvetica,Arial,sans-serif">Map</text><rect x="20" y="200" width="200" height="10" rx="5" fill="#f1f1f1" stroke="#c9c9c9"/><rect x="20" y="200" width="110" height="10" rx="5" fill="#111111" stroke="#111111"/><text x="20" y="232" font-size="11" font-weight="bold" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Asking nearby captains</text><text x="20" y="250" font-size="10" font-weight="normal" fill="#8a8a8a" text-anchor="start" font-family="Helvetica,Arial,sans-serif">3 notified &#183; usually under 1 min</text><rect x="20" y="272" width="200" height="50" rx="8" fill="#ffffff" stroke="#c9c9c9"/><text x="30" y="292" font-size="10" font-weight="bold" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Ride details</text><text x="30" y="310" font-size="10" font-weight="normal" fill="#8a8a8a" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Drop, fare and payment shared</text><rect x="20" y="390" width="200" height="30" rx="15" fill="#ffffff" stroke="#2b2b2b"/><text x="120.0" y="410" font-size="11" font-weight="bold" fill="#2b2b2b" text-anchor="middle" font-family="Helvetica,Arial,sans-serif">Cancel request</text></svg><p><small>3. Finding a captain: live status so waiting feels less uncertain</small></p></div><div class="3u 6u$(medium) 12u$(small)" style="text-align:center"><svg viewBox="0 0 240 440" role="img" aria-label="Captain cancelled: automatic re-match" style="width:100%;max-width:240px;height:auto"><rect x="2" y="2" width="236" height="436" rx="22" fill="#ffffff" stroke="#2b2b2b"/><rect x="90" y="10" width="60" height="6" rx="3" fill="#f1f1f1" stroke="#f1f1f1"/><text x="20" y="40" font-size="14" font-weight="normal" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">&#8592;</text><text x="120" y="40" font-size="12" font-weight="bold" fill="#2b2b2b" text-anchor="middle" font-family="Helvetica,Arial,sans-serif">Update on your ride</text><rect x="20" y="58" width="200" height="70" rx="8" fill="#fdf0dc" stroke="#b25e00"/><text x="30" y="80" font-size="12" font-weight="bold" fill="#b25e00" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Your captain cancelled</text><text x="30" y="98" font-size="10" font-weight="normal" fill="#b25e00" text-anchor="start" font-family="Helvetica,Arial,sans-serif">No fee to you</text><text x="30" y="114" font-size="10" font-weight="normal" fill="#b25e00" text-anchor="start" font-family="Helvetica,Arial,sans-serif">We are rebooking the next nearest</text><rect x="20" y="142" width="200" height="10" rx="5" fill="#f1f1f1" stroke="#c9c9c9"/><rect x="20" y="142" width="70" height="10" rx="5" fill="#111111" stroke="#111111"/><rect x="20" y="172" width="200" height="64" rx="8" fill="#ffffff" stroke="#c9c9c9"/><text x="30" y="194" font-size="11" font-weight="bold" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Priority rematch</text><text x="30" y="212" font-size="10" font-weight="normal" fill="#8a8a8a" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Next captain is asked first</text><text x="30" y="228" font-size="10" font-weight="normal" fill="#8a8a8a" text-anchor="start" font-family="Helvetica,Arial,sans-serif">ETA updates live</text><rect x="20" y="330" width="200" height="30" rx="15" fill="#2b2b2b" stroke="#2b2b2b"/><text x="120.0" y="350" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle" font-family="Helvetica,Arial,sans-serif">Switch to Auto</text><rect x="20" y="372" width="200" height="30" rx="15" fill="#ffffff" stroke="#2b2b2b"/><text x="120.0" y="392" font-size="11" font-weight="bold" fill="#2b2b2b" text-anchor="middle" font-family="Helvetica,Arial,sans-serif">Cancel ride</text></svg><p><small>4. Proposed: automatic priority re-match if a captain cancels</small></p></div></div>
+                </div>
+            </section>
+
+            <section id="features" class="wrapper style1">
+                <div class="inner">
+                    <header class="major"><h2>Feature Ideas</h2><p>My suggestions, not claims about Rapido's roadmap.</p></header>
+                    <div class="row">
+                        <div class="6u 12u$(medium)">
+                            <h3>1. Priority re-match after a captain cancels</h3>
+                            <p>If a captain cancels, automatically re-request the next nearest captain and move the rider up the queue, with no fee to the rider. <b>Why:</b> cancellation is the top complaint. <b>Risk:</b> needs to avoid punishing captains who cancel for genuine reasons.</p>
+                        </div>
+                        <div class="6u 12u$(medium)">
+                            <h3>2. Pickup confidence per ride type</h3>
+                            <p>Next to each ride option, show expected pickup time and how likely it is to be accepted soon. <b>Why:</b> helps riders choose the option that actually arrives sooner. <b>Risk:</b> a wrong estimate hurts trust more than none.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="6u 12u$(medium)">
+                            <h3>3. Book for someone else</h3>
+                            <p>Let a rider book for a family member, share live tracking and the captain's details with them. <b>Why:</b> a common need that avoids phone calls. <b>Risk:</b> safety and fraud checks.</p>
+                        </div>
+                        <div class="6u 12u$(medium)">
+                            <h3>4. Add a stop</h3>
+                            <p>Allow one or more intermediate stops with the fare updated upfront. <b>Why:</b> fewer off-app negotiations for multi-stop trips. <b>Risk:</b> longer trips are less attractive for captains unless the fare reflects them.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="bmc" class="wrapper style3">
+                <div class="inner">
+                    <header class="major"><h2>Business Model Canvas</h2></header>
+                    <div class="table-wrapper"><table><tbody>
+<tr><td><b>Key partners</b><br />Captains (bike, auto, cab), payment providers, city transport regulators</td><td><b>Key activities</b><br />Matching, pricing, captain onboarding, safety, support</td><td><b>Value proposition</b><br />Riders: affordable rides across bike, auto and cab. Captains: low or no commission, with a daily subscription for autos and cabs</td><td><b>Customer relationships</b><br />Self-serve app, in-app support, ratings</td><td><b>Customer segments</b><br />Daily commuters, students, last-mile riders, captains as the supply side</td></tr>
+<tr><td><b>Key resources</b><br />Captain network, matching and pricing technology, brand</td><td colspan="2"><b>Channels</b><br />Mobile app, word of mouth, captain referrals, local campaigns</td><td colspan="2"><b>Revenue</b><br />Commission on bike rides, subscription fees from auto and cab captains, delivery services</td></tr>
+<tr><td colspan="5"><b>Cost structure</b><br />Technology and operations, incentives and marketing, support and safety, payment fees</td></tr>
+</tbody></table></div>
+                    <p>Reported FY25 revenue lines include subscription (about &#8377;275 crore), two-wheeler commission (about &#8377;277 crore) and delivery (about &#8377;340 crore), per <a target="_blank" href="https://openthemagazine.com/business/ubers-india-squeeze-rapido-surges-as-the-driver-battle-intensifies">Open magazine</a>. Competition from zero-commission rivals is discussed by <a target="_blank" href="https://sacra.com/research/rapido">Sacra</a>.</p>
+                </div>
+            </section>
+
+            <section id="metrics" class="wrapper style1">
+                <div class="inner">
+                    <header class="major"><h2>Key Metrics</h2></header>
+                    <div class="row">
+                        <div class="4u 12u$(medium)"><h3>North Star</h3><p><b>Completed rides per week.</b></p><ul><li>Counts rides that actually finish, not just bookings, so it rewards reliability.</li></ul></div>
+                        <div class="4u 12u$(medium)"><h3>L1: Fulfilment</h3><p><b>% of booking requests that become completed rides.</b></p><ul><li>Break down cancellations by reason and by who cancelled.</li><li>Track time from request to captain accepted.</li></ul></div>
+                        <div class="4u 12u$(medium)"><h3>L2: Retention</h3><p><b>% of riders who book again within 30 days.</b></p><ul><li>Compare riders who had a cancelled ride with those who did not.</li></ul></div>
+                    </div>
+                    <h3>Guardrails</h3>
+                    <ul>
+                        <li>Captain-side acceptance rate and earnings per hour, so rider fixes do not hurt supply.</li>
+                        <li>Fare disputes and complaints per 1,000 rides.</li>
+                        <li>Booking-flow success rate and app availability during peaks.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="sources" class="wrapper style3">
+                <div class="inner">
+                    <header class="major"><h2>Sources</h2></header>
+                    <ul>
+                        <li><a target="_blank" href="https://www.outlookbusiness.com/magazine/rapido-flips-the-formula-of-indias-consumer-tech-unicorns-to-disrupt-the-uber-ola-duopoly">https://www.outlookbusiness.com/magazine/rapido-flips-the-formula-of-indias-consumer-tech-unicorns-to-disrupt-the-uber-ola-duopoly</a></li>
+                        <li><a target="_blank" href="https://www.outlookbusiness.com/interviews/we-dont-want-to-squeeze-our-driver-partners-with-20-30-cuts-rapidos-guntupalli">https://www.outlookbusiness.com/interviews/we-dont-want-to-squeeze-our-driver-partners-with-20-30-cuts-rapidos-guntupalli</a></li>
+                        <li><a target="_blank" href="https://openthemagazine.com/business/ubers-india-squeeze-rapido-surges-as-the-driver-battle-intensifies">https://openthemagazine.com/business/ubers-india-squeeze-rapido-surges-as-the-driver-battle-intensifies</a></li>
+                        <li><a target="_blank" href="https://sacra.com/research/rapido">https://sacra.com/research/rapido</a></li>
+                        <li><a target="_blank" href="https://theprint.in/india/drivers-cancelling-rides-top-issue-for-79-of-taxi-app-users-survey-finds/905765">https://theprint.in/india/drivers-cancelling-rides-top-issue-for-79-of-taxi-app-users-survey-finds/905765</a></li>
+                        <li><a target="_blank" href="https://www.businesstoday.in/latest/story/drivers-cancelling-ride-after-knowing-destination-main-concern-for-users-report-329045-2022-04-07">https://www.businesstoday.in/latest/story/drivers-cancelling-ride-after-knowing-destination-main-concern-for-users-report-329045-2022-04-07</a></li>
+                        <li><a target="_blank" href="https://www.deccanherald.com/amp/story/india%2Fkarnataka%2Fbengaluru%2Fride-hailing-woes-cancellations-surcharges-top-consumer-grievances-2-3163446">https://www.deccanherald.com/amp/story/india%2Fkarnataka%2Fbengaluru%2Fride-hailing-woes-cancellations-surcharges-top-consumer-grievances-2-3163446</a></li>
+                        <li><a target="_blank" href="https://www.freepressjournal.in/amp/pune/pay-by-meter-or-cancel-ola-uber-rapido-auto-drivers-harass-pune-commuters">https://www.freepressjournal.in/amp/pune/pay-by-meter-or-cancel-ola-uber-rapido-auto-drivers-harass-pune-commuters</a></li>
+                        <li><a target="_blank" href="https://yourstory.com/2026/08/rapido-faces-app-outage-as-ride-booking-issue-hit-users">https://yourstory.com/2026/08/rapido-faces-app-outage-as-ride-booking-issue-hit-users</a></li>
+                    </ul>
+                    <p><i>Independent teardown. Not affiliated with Rapido. Survey figures come from press coverage of LocalCircles surveys and are indicative. Check key figures against primary sources before reuse.</i></p>
+                    <ul class="actions"><li><a href="case-studies.html" class="button">&larr; All case studies</a></li></ul>
+                </div>
+            </section>
+            <!-- Footer -->
+            <section id="footer" class="wrapper split style2">
+                <div class="copyright">
+                    <p>&copy; <script>document.write(new Date().getFullYear())</script> Shivam Bajaj</p>
+                </div>
+            </section>
+        </div>
+
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.3.5.1.js"></script>
+        <script src="assets/js/skel.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+        <script src="assets/js/main.js"></script>
+
+    </body>
+</html>
