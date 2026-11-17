@@ -21,11 +21,19 @@
 		// Disable animations/transitions until the page has loaded.
 			$body.addClass('is-loading');
 
-			$window.on('load', function() {
+			// Robust against blockers (e.g. Brave Shields) that change load timing: the 'load' event may
+			// already have fired by the time this runs, so also check readyState and add a safety timeout.
+			function finishLoading() {
 				window.setTimeout(function() {
 					$body.removeClass('is-loading');
 				}, 100);
-			});
+			}
+			if (document.readyState === 'complete') {
+				finishLoading();
+			} else {
+				$window.on('load', finishLoading);
+				window.setTimeout(function() { $body.removeClass('is-loading'); }, 3000);
+			}
 
 		// Fix: Placeholder polyfill.
 			$('form').placeholder();
