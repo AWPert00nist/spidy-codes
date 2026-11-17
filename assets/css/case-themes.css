@@ -9,6 +9,8 @@ body.theme-slice { --hero-bg:#9E2BD0; --hero-ink:#ffffff; --dark-bg:#2a0f3b; --d
 
 body.theme-treebo { --hero-bg:#A67C2E; --hero-ink:#ffffff; --dark-bg:#2b2113; --dark-ink:#ffffff; --dark-btn:#ecd9ae; --accent:#A67C2E; --soft:#f7efdf; }
 
+body.theme-bumble { --hero-bg:#FEDB5B; --hero-ink:#1a1a1a; --dark-bg:#1a1a1a; --dark-ink:#ffffff; --dark-btn:#FEDB5B; --accent:#1a1a1a; --soft:#fff7d6; }
+
 body[class*="theme-"] .wrapper.style1 { --btn: var(--accent); }
 body[class*="theme-"] .wrapper.style2 { --btn: var(--hero-ink); background-color: var(--hero-bg); color: var(--hero-ink); }
 body[class*="theme-"] .wrapper.style3 { --btn: var(--dark-btn); background-image: none; background-color: var(--dark-bg); color: var(--dark-ink); }
@@ -61,3 +63,6 @@ body.theme-slice .wrapper.style3 .button:hover { color: var(--dark-bg) !importan
 
 body.theme-treebo .wrapper.style1 .button:hover { color: #ffffff !important; }
 body.theme-treebo .wrapper.style3 .button:hover { color: var(--dark-bg) !important; }
+
+body.theme-bumble .wrapper.style1 .button:hover { color: #FEDB5B !important; }
+body.theme-bumble .wrapper.style3 .button:hover { color: var(--dark-bg) !important; }

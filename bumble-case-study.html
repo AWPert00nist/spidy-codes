@@ -1,0 +1,187 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Shivam Bajaj | Bumble in India Case Study</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="stylesheet" href="assets/css/case-themes.css?v=2" />
+        <meta name="theme-color" content="#FEDB5B" />
+        <link rel="icon" href="images/favicon.png">
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-43112646-3"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+
+            gtag('config', 'UA-43112646-3');
+        </script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+        <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+    </head>
+    <body class="theme-bumble">
+
+        <!-- Header -->
+        <header id="header">
+            <nav>
+                <ul>
+                    <li><a href="#menu">Menu</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Menu -->
+        <nav id="menu">
+            <h2>Menu</h2>
+            <ul class="links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="case-studies.html">Case Studies</a></li>
+                <li><a href="more-about-me.html">About</a></li>
+                <li><a href="index.html#contact-me-form-target">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Wrapper -->
+        <div id="wrapper">
+            <section class="wrapper style2 special">
+                <div class="inner">
+                    <header class="major">
+                        <img class="brand-logo" src="images/logos/bumble.jpg" alt="Bumble logo" />
+                        <h1>Bumble in India: Why It Has Not Broken Out</h1>
+                        <p>A case study of growth and monetisation in a hard market, with personas, proposed fixes and wireframes, by Shivam Bajaj.</p>
+                    </header>
+                    <ul class="actions jump-nav">
+                        <li><a href="#question" class="button">Question</a></li>
+                        <li><a href="#market" class="button">Market</a></li>
+                        <li><a href="#why" class="button">Why</a></li>
+                        <li><a href="#users" class="button">Personas</a></li>
+                        <li><a href="#audit" class="button">Audit</a></li>
+                        <li><a href="#solutions" class="button">Changes</a></li>
+                        <li><a href="#wireframes" class="button">Wireframes</a></li>
+                        <li><a href="#ice" class="button">ICE</a></li>
+                        <li><a href="#metrics" class="button">Metrics</a></li>
+                        <li><a href="#gtm" class="button">Rollout</a></li>
+                        <li><a href="#sources" class="button">Sources</a></li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="question" class="wrapper style1">
+                <div class="inner">
+                    <header class="major"><h2>The Question</h2></header>
+                    <p>Bumble arrived in India in 2018 with a women-first promise (<a target="_blank" href="https://dc.fortune.com/2018/10/03/bumble-thinks-it-can-fix-dating-apps-for-women-in-india">Fortune</a>; <a target="_blank" href="https://qz.com/india/1613650/how-priyanka-chopra-backed-dating-app-bumble-is-winning-india">Quartz</a>). It has users and has grown here: its India revenue roughly doubled year on year in Q3 2022 (<a target="_blank" href="https://inc42.com/buzz/us-based-dating-app-bumbles-india-revenue-doubles-yoy-in-q3-2022">Inc42</a>). Yet the evidence since points to a business that has not broken out, as monetisation stays weak and foreign apps have cut spend (<a target="_blank" href="https://www.magzter.com/en/stories/newspaper/Financial-Express-Mumbai/LOVE-BLOOMS-FOR-SWADESHI-DATING-APPS">Financial Express</a>).</p><p><b>The question I am answering:</b> why has Bumble not become a leading, profitable dating app in India, and what could change that?</p><p><i>The title says "why it does not work" because that is how the question is usually asked. The sources say something narrower: it works as a product, but growth and monetisation are hard. Built only from public sources; I have no access to Bumble's internal data. Many sources are press or vendor pieces, so I flag where a point is a hypothesis.</i></p>
+                </div>
+            </section>
+
+            <section id="market" class="wrapper style3">
+                <div class="inner">
+                    <header class="major"><h2>Market & Competition</h2></header>
+                    <div class="row"><div class="4u 12u$(medium)"><h3>Willingness to pay</h3><ul><li>Redseer says only 5&ndash;15% of monthly active users typically upgrade to paid plans (<a target="_blank" href="https://redseer.com/articles/whos-winning-in-indias-dating-matrimony-market-and-where-are-the-opportunities-for-platforms-and-investors/">Redseer</a>).</li><li>Foreign players reportedly cut staff and marketing because of poor monetisation and low willingness to pay (<a target="_blank" href="https://www.magzter.com/en/stories/newspaper/Financial-Express-Mumbai/LOVE-BLOOMS-FOR-SWADESHI-DATING-APPS">Financial Express</a>).</li></ul></div><div class="4u 12u$(medium)"><h3>Competition</h3><ul><li>Tinder, Hinge and homegrown apps such as Aisle, TrulyMadly and QuackQuack compete (<a target="_blank" href="https://redseer.com/articles/whos-winning-in-indias-dating-matrimony-market-and-where-are-the-opportunities-for-platforms-and-investors/">Redseer</a>).</li><li>Hinge leans on relationship intent; Aisle targets serious relationships within language communities (<a target="_blank" href="https://redseer.com/articles/whos-winning-in-indias-dating-matrimony-market-and-where-are-the-opportunities-for-platforms-and-investors/">Redseer</a>).</li><li>Aisle's revenue reportedly rose 146% after Info Edge took a stake, per a company-side account (<a target="_blank" href="https://inc42.com/startups/the-info-edge-effect-how-dating-app-aisles-revenue-soared-146-after-acquisition">Inc42</a>).</li></ul></div><div class="4u 12u$(medium)"><h3>Bumble globally</h3><ul><li>Paying users fell about 16% year on year to roughly 3.6M in Q3 2025, with revenue down about 10% (<a target="_blank" href="https://fintool.com/app/research/companies/BMBL/earnings/Q3%202025">Fintool</a>; secondary source).</li><li>Management is prioritising quality over quantity and trust and safety, and cutting performance marketing (<a target="_blank" href="https://www.nasdaq.com/articles/bumbles-customer-retention-rate-slips-growth-getting-harder">Nasdaq</a>).</li></ul></div></div><p><i>I found no recent India-specific Bumble revenue or user numbers, so I do not quote any.</i></p>
+                </div>
+            </section>
+
+            <section id="why" class="wrapper style1">
+                <div class="inner">
+                    <header class="major"><h2>Why It Has Not Broken Out</h2></header>
+                    <p>Public evidence supports some of these; others are my hypotheses and are labelled.</p><div class="row"><div class="6u 12u$(medium)"><h3>1. Low willingness to pay</h3><p>Few users upgrade, and acquisition costs are high (<a target="_blank" href="https://redseer.com/articles/whos-winning-in-indias-dating-matrimony-market-and-where-are-the-opportunities-for-platforms-and-investors/">Redseer</a>). Global pricing may not fit Indian incomes, a hypothesis. Bumble had planned a locally tailored bundle for India (<a target="_blank" href="https://inc42.com/buzz/us-based-dating-app-bumbles-india-revenue-doubles-yoy-in-q3-2022">Inc42</a>).</p></div><div class="6u 12u$(medium)"><h3>2. The women-first promise is hard to prove</h3><p>Women who report harassment on dating apps in India (<a target="_blank" href="https://theprint.in/feature/indian-women-are-getting-assaulted-on-tinder-dates-and-no-one-knows-how-to-stop-it/151022/">ThePrint</a>) and academic work noting reports of abuse on Bumble despite its design (<a target="_blank" href="https://spir.aoir.org/ojs/index.php/spir/article/download/14037/11853/89971">study</a>) suggest safety must be visible, not just a brand claim.</p></div></div><div class="row"><div class="6u 12u$(medium)"><h3>3. Skewed gender ratio</h3><p>A heavily male user base reduces the value for women and slows the network effect (<a target="_blank" href="https://in.benzinga.com/content/36252930/indias-love-story-with-tinder-bumble-nikhil-kamath-breaks-down-the-dating-math">Nikhil Kamath analysis</a>; <a target="_blank" href="https://www.magzter.com/en/stories/newspaper/Financial-Express-Mumbai/LOVE-BLOOMS-FOR-SWADESHI-DATING-APPS">Financial Express</a>).</p></div><div class="6u 12u$(medium)"><h3>4. Intent and community fit</h3><p><i>Hypothesis:</i> Indian users range from casual to marriage-minded. Local apps offer community and language filters (<a target="_blank" href="https://www.loestro.com/?p=11493">Loestro, vendor piece</a>) that a global product may not prioritise.</p></div></div><div class="row"><div class="6u 12u$(medium)"><h3>5. Stigma and privacy</h3><p><i>Hypothesis:</i> Fear of being seen by family or colleagues keeps some people from creating a visible profile or paying for the app (<a target="_blank" href="https://www.magzter.com/en/stories/newspaper/Financial-Express-Mumbai/LOVE-BLOOMS-FOR-SWADESHI-DATING-APPS">Financial Express</a>).</p></div><div class="6u 12u$(medium)"><h3>6. Less marketing push</h3><p><i>Hypothesis:</i> Bumble has reduced performance marketing globally (<a target="_blank" href="https://www.nasdaq.com/articles/bumbles-customer-retention-rate-slips-growth-getting-harder">Nasdaq</a>); if India is affected, user acquisition slows.</p></div></div>
+                </div>
+            </section>
+
+            <section id="users" class="wrapper style3">
+                <div class="inner">
+                    <header class="major"><h2>Personas</h2></header>
+                    <p>Illustrative archetypes, not real people. Hypotheses are labelled.</p><div class="row"><div class="6u 12u$(medium)"><h3>The safety-first metro woman</h3><p><b>Who:</b> 27, works in Bengaluru, wary of unsolicited messages</p><p><b>Goals:</b> Meet people who are real and respectful</p><p><b>Pain points:</b> Harassment concerns (<a target="_blank" href="https://theprint.in/feature/indian-women-are-getting-assaulted-on-tinder-dates-and-no-one-knows-how-to-stop-it/151022/">ThePrint</a>); unsure whether profiles are genuine</p><p><b>Opportunity:</b> More visibility for verification, verified-first discovery and visible report outcomes</p></div><div class="6u 12u$(medium)"><h3>The marriage-minded professional</h3><p><b>Who:</b> 29, wants a partner, not casual dating</p><p><b>Goals:</b> Meet people with the same intent</p><p><b>Pain points:</b> <i>Hypothesis:</i> intent is unclear, so conversations stall. I could not confirm which intent options exist today</p><p><b>Opportunity:</b> Check existing intent options and make them prominent</p></div></div><div class="row"><div class="6u 12u$(medium)"><h3>The privacy-conscious tier-2 user</h3><p><b>Who:</b> 24, afraid of being seen by family or colleagues</p><p><b>Goals:</b> Use the app discreetly</p><p><b>Pain points:</b> <i>Hypothesis:</i> hesitates to add photos or pay. Incognito is reported as a paid feature, unconfirmed (<a target="_blank" href="https://businessinsider.in/tech/how-to/bumble-is-free-but-you-can-pay-for-extra-features-heres-what-the-dating-app-offers/amp_articleshow/87786318.cms">Business Insider India</a>)</p><p><b>Opportunity:</b> Test a limited free privacy control in India</p></div><div class="6u 12u$(medium)"><h3>The value-conscious payer</h3><p><b>Who:</b> 25, uses free features, hesitates over monthly plans</p><p><b>Goals:</b> Pay only for what helps</p><p><b>Pain points:</b> Few users upgrade (<a target="_blank" href="https://redseer.com/articles/whos-winning-in-indias-dating-matrimony-market-and-where-are-the-opportunities-for-platforms-and-investors/">Redseer</a>)</p><p><b>Opportunity:</b> Test short passes and UPI at checkout, if not already offered</p></div></div>
+                </div>
+            </section>
+
+            <section id="audit" class="wrapper style1">
+                <div class="inner">
+                    <header class="major"><h2>What Bumble Already Has</h2></header>
+                    <p>Before proposing anything, here is what already exists, so I only recommend changes to real gaps. Rows marked <b>Unconfirmed</b> need checking in the India app.</p><div class="table-wrapper"><table><thead><tr><th>Problem</th><th>What Bumble already has</th><th>Status</th><th>Open question</th></tr></thead><tbody><tr><td>Fake or unverified profiles</td><td>Photo verification, ID verification and a verified badge (<a target="_blank" href="https://support.bumble.com/hc/articles/28537051467293-Our-safety-features">Bumble support</a>; <a target="_blank" href="https://safety.bumble.com/">Bumble safety centre</a>)</td><td>Confirmed</td><td>Adoption and visibility in India are unknown to me</td></tr><tr><td>Explicit or abusive messages</td><td>Private Detector blurs explicit images; block, report and message-review tools (<a target="_blank" href="https://www.globaldatinginsights.com/news/private-detector-software-goes-live-on-bumble/">Global Dating Insights</a>; <a target="_blank" href="https://safety.bumble.com/">Bumble safety centre</a>)</td><td>Confirmed</td><td>Whether users see what happens after a report is unknown</td></tr><tr><td>Verified-only filter or default</td><td>Not found in my sources</td><td>Unconfirmed</td><td>Check in the India app</td></tr><tr><td>Relationship intent, language or community options</td><td>Not found in my sources</td><td>Unconfirmed</td><td>Check in the India app</td></tr><tr><td>Discreet use (Incognito)</td><td>Reported as a Premium feature by a third-party guide (<a target="_blank" href="https://businessinsider.in/tech/how-to/bumble-is-free-but-you-can-pay-for-extra-features-heres-what-the-dating-app-offers/amp_articleshow/87786318.cms">Business Insider India</a>)</td><td>Unconfirmed</td><td>Confirm in app and whether it needs a paid plan</td></tr><tr><td>India pricing and payment</td><td>Third-party price lists disagree with each other; no official source found</td><td>Unconfirmed</td><td>Confirm in-app prices and whether UPI is offered</td></tr></tbody></table></div>
+                </div>
+            </section>
+
+            <section id="solutions" class="wrapper style3">
+                <div class="inner">
+                    <header class="major"><h2>Proposed Changes</h2></header>
+                    <p>These improve existing flows rather than add new features. My suggestions, not claims about Bumble's roadmap. Items 3 to 5 are conditional on the audit above.</p><div class="row"><div class="6u 12u$(medium)"><h3>1. Verification adoption and visibility</h3><p>Verification exists. Make it part of onboarding with a clear "why", and show verified-first discovery so there is a reason to do it.</p></div><div class="6u 12u$(medium)"><h3>2. Report outcome transparency</h3><p>Reporting exists. Show a clear confirmation and the outcome of each report, so users trust that it works.</p></div></div><div class="row"><div class="6u 12u$(medium)"><h3>3. Verified-first default for women</h3><p>If a verified filter or ranking is not already on by default, test turning it on for women in India.</p></div><div class="6u 12u$(medium)"><h3>4. Test India pricing and payment</h3><p>If not already offered, test short passes and UPI at checkout against current plans.</p></div></div><div class="row"><div class="6u 12u$(medium)"><h3>5. Limited free privacy control</h3><p>If Incognito is paid-only, test a limited free version in India to reduce hesitation to sign up.</p></div></div>
+                </div>
+            </section>
+
+            <section id="wireframes" class="wrapper style1">
+                <div class="inner">
+                    <header class="major"><h2>Wireframes</h2><p>Low-fidelity sketches of the two highest-ranked changes. Illustrative layouts, not Bumble's real design. All copy is placeholder.</p></header>
+                    <div class="row"><div class="3u 6u$(medium) 12u$(small)" style="text-align:center"><svg viewBox="0 0 240 440" role="img" aria-label="Onboarding: verification explained with benefits" style="width:100%;max-width:240px;height:auto"><rect x="2" y="2" width="236" height="436" rx="22" fill="#ffffff" stroke="#2b2b2b"/><rect x="90" y="10" width="60" height="6" rx="3" fill="#f1f1f1" stroke="#f1f1f1"/><text x="20" y="40" font-size="14" font-weight="normal" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">&#8592;</text><text x="120" y="40" font-size="12" font-weight="bold" fill="#2b2b2b" text-anchor="middle" font-family="Helvetica,Arial,sans-serif">Verify your profile</text><rect x="20" y="56" width="200" height="6" rx="3" fill="#f1f1f1" stroke="#c9c9c9"/><rect x="20" y="56" width="140" height="6" rx="3" fill="#FEDB5B" stroke="#2b2b2b"/><rect x="20" y="80" width="200" height="70" rx="10" fill="#fff7d6" stroke="#2b2b2b"/><text x="32" y="102" font-size="11" font-weight="bold" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Verified profiles are seen first</text><text x="32" y="122" font-size="10" font-weight="normal" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">and get more replies.</text><text x="32" y="138" font-size="10" font-weight="normal" fill="#8a8a8a" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Takes about 20 seconds.</text><text x="20" y="178" font-size="11" font-weight="bold" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Why verify</text><text x="20" y="198" font-size="10" font-weight="normal" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">&#10003; Others know you are real</text><text x="20" y="216" font-size="10" font-weight="normal" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">&#10003; Your selfie is never shown</text><text x="20" y="234" font-size="10" font-weight="normal" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">&#10003; Match with other verified people</text><text x="20" y="268" font-size="10" font-weight="normal" fill="#8a8a8a" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Skip for now (you can verify later)</text><rect x="20" y="390" width="200" height="30" rx="15" fill="#2b2b2b" stroke="#2b2b2b"/><text x="120.0" y="410" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle" font-family="Helvetica,Arial,sans-serif">Verify now</text></svg><p><small>1a. Verification explained during onboarding (proposed change to the existing step)</small></p></div><div class="3u 6u$(medium) 12u$(small)" style="text-align:center"><svg viewBox="0 0 240 440" role="img" aria-label="Discover: verified-first is shown and explained" style="width:100%;max-width:240px;height:auto"><rect x="2" y="2" width="236" height="436" rx="22" fill="#ffffff" stroke="#2b2b2b"/><rect x="90" y="10" width="60" height="6" rx="3" fill="#f1f1f1" stroke="#f1f1f1"/><text x="20" y="40" font-size="14" font-weight="bold" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Discover</text><rect x="14" y="52" width="212" height="34" rx="8" fill="#fff7d6" stroke="#2b2b2b"/><text x="24" y="73" font-size="10" font-weight="bold" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Showing verified profiles first</text><text x="216" y="73" font-size="10" font-weight="normal" fill="#8a8a8a" text-anchor="end" font-family="Helvetica,Arial,sans-serif">Change</text><rect x="20" y="98" width="200" height="160" rx="8" fill="#f1f1f1" stroke="#c9c9c9"/><line x1="20" y1="98" x2="220" y2="258" stroke="#c9c9c9"/><line x1="220" y1="98" x2="20" y2="258" stroke="#c9c9c9"/><text x="20" y="280" font-size="12" font-weight="bold" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Aanya, 27 &#10003;</text><text x="20" y="298" font-size="10" font-weight="normal" fill="#8a8a8a" text-anchor="start" font-family="Helvetica,Arial,sans-serif">3 km away</text><rect x="20" y="312" width="200" height="30" rx="8" fill="#ffffff" stroke="#c9c9c9"/><text x="120" y="331" font-size="10" font-weight="normal" fill="#2b2b2b" text-anchor="middle" font-family="Helvetica,Arial,sans-serif">You are verified &#10003;</text><rect x="30" y="356" width="70" height="40" rx="20" fill="#ffffff" stroke="#c9c9c9"/><text x="65" y="380" font-size="14" font-weight="bold" fill="#2b2b2b" text-anchor="middle" font-family="Helvetica,Arial,sans-serif">&#10005;</text><rect x="140" y="356" width="70" height="40" rx="20" fill="#FEDB5B" stroke="#2b2b2b"/><text x="175" y="380" font-size="14" font-weight="bold" fill="#2b2b2b" text-anchor="middle" font-family="Helvetica,Arial,sans-serif">&#10003;</text></svg><p><small>1b. Discover explains verified-first ranking</small></p></div><div class="3u 6u$(medium) 12u$(small)" style="text-align:center"><svg viewBox="0 0 240 440" role="img" aria-label="After reporting: a clear confirmation" style="width:100%;max-width:240px;height:auto"><rect x="2" y="2" width="236" height="436" rx="22" fill="#ffffff" stroke="#2b2b2b"/><rect x="90" y="10" width="60" height="6" rx="3" fill="#f1f1f1" stroke="#f1f1f1"/><text x="20" y="40" font-size="14" font-weight="normal" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">&#8592;</text><text x="120" y="40" font-size="12" font-weight="bold" fill="#2b2b2b" text-anchor="middle" font-family="Helvetica,Arial,sans-serif">Report sent</text><circle cx="120" cy="110" r="30" fill="#FEDB5B" stroke="#2b2b2b"/><text x="120" y="118" font-size="22" font-weight="bold" fill="#2b2b2b" text-anchor="middle" font-family="Helvetica,Arial,sans-serif">&#10003;</text><text x="120" y="170" font-size="12" font-weight="bold" fill="#2b2b2b" text-anchor="middle" font-family="Helvetica,Arial,sans-serif">Thanks for telling us</text><text x="120" y="190" font-size="10" font-weight="normal" fill="#8a8a8a" text-anchor="middle" font-family="Helvetica,Arial,sans-serif">We will review within 24 hours.</text><rect x="20" y="214" width="200" height="56" rx="8" fill="#fff7d6" stroke="#2b2b2b"/><text x="30" y="234" font-size="10" font-weight="normal" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">This person can no longer contact you.</text><text x="30" y="252" font-size="10" font-weight="normal" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">You will see the outcome here.</text><rect x="20" y="390" width="200" height="30" rx="15" fill="#2b2b2b" stroke="#2b2b2b"/><text x="120.0" y="410" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle" font-family="Helvetica,Arial,sans-serif">Done</text></svg><p><small>2a. Confirmation after a report</small></p></div><div class="3u 6u$(medium) 12u$(small)" style="text-align:center"><svg viewBox="0 0 240 440" role="img" aria-label="Report outcome shown in the app" style="width:100%;max-width:240px;height:auto"><rect x="2" y="2" width="236" height="436" rx="22" fill="#ffffff" stroke="#2b2b2b"/><rect x="90" y="10" width="60" height="6" rx="3" fill="#f1f1f1" stroke="#f1f1f1"/><text x="20" y="40" font-size="14" font-weight="normal" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">&#8592;</text><text x="120" y="40" font-size="12" font-weight="bold" fill="#2b2b2b" text-anchor="middle" font-family="Helvetica,Arial,sans-serif">Your reports</text><rect x="20" y="60" width="200" height="84" rx="10" fill="#ffffff" stroke="#c9c9c9"/><text x="30" y="82" font-size="10" font-weight="bold" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Report on 12 Nov</text><text x="30" y="102" font-size="10" font-weight="normal" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Reviewed &#183; Account removed</text><text x="30" y="122" font-size="9" font-weight="normal" fill="#8a8a8a" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Thank you for helping keep Bumble safe.</text><rect x="20" y="154" width="200" height="70" rx="10" fill="#ffffff" stroke="#c9c9c9"/><text x="30" y="176" font-size="10" font-weight="bold" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Report on 20 Nov</text><text x="30" y="196" font-size="10" font-weight="normal" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">In review &#183; due within 24 hours</text><rect x="20" y="244" width="200" height="52" rx="8" fill="#fff7d6" stroke="#2b2b2b"/><text x="30" y="264" font-size="10" font-weight="normal" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">We do not share details about</text><text x="30" y="280" font-size="10" font-weight="normal" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">other members, only the outcome.</text><rect x="20" y="390" width="200" height="30" rx="15" fill="#ffffff" stroke="#2b2b2b"/><text x="120.0" y="410" font-size="11" font-weight="bold" fill="#2b2b2b" text-anchor="middle" font-family="Helvetica,Arial,sans-serif">Back to Discover</text></svg><p><small>2b. Report outcomes inside the app</small></p></div></div>
+                </div>
+            </section>
+
+            <section id="ice" class="wrapper style3">
+                <div class="inner">
+                    <header class="major"><h2>Prioritization (ICE)</h2></header>
+                    <div class="table-wrapper"><table><thead><tr><th>Idea</th><th>Impact</th><th>Confidence</th><th>Ease</th><th>Score</th></tr></thead><tbody><tr><td>1. Verification adoption and visibility</td><td>8</td><td>7</td><td>7</td><td>7.3</td></tr><tr><td>2. Report outcome transparency</td><td>7</td><td>6</td><td>7</td><td>6.7</td></tr><tr><td>3. Verified-first default for women</td><td>8</td><td>5</td><td>6</td><td>6.3</td></tr><tr><td>4. India pricing and payment test</td><td>7</td><td>5</td><td>6</td><td>6.0</td></tr><tr><td>5. Limited free privacy control</td><td>6</td><td>5</td><td>5</td><td>5.3</td></tr></tbody></table></div><p><i>Scores are my own judgement on a 1&ndash;10 scale, not data. Score is the average.</i></p>
+                </div>
+            </section>
+
+            <section id="metrics" class="wrapper style1">
+                <div class="inner">
+                    <header class="major"><h2>Success Metrics</h2></header>
+                    <div class="row"><div class="4u 12u$(medium)"><h3>North Star</h3><p><b>Weekly two-way conversations per active woman in India.</b></p><ul><li>Signals that the experience works for the scarcer side.</li></ul></div><div class="4u 12u$(medium)"><h3>L1</h3><ul><li>Share of new users who complete verification, and share of profiles verified.</li><li>Week-4 retention for women.</li></ul></div><div class="4u 12u$(medium)"><h3>L2</h3><ul><li>Paid conversion rate and revenue per paying user.</li><li>Share of matches that lead to a conversation, and report-resolution satisfaction.</li></ul></div></div><h3>Guardrails</h3><ul><li>Reports and blocks per 1,000 conversations.</li><li>Fraud and fake-profile rate.</li><li>Refund and chargeback rate after pricing changes.</li></ul>
+                </div>
+            </section>
+
+            <section id="gtm" class="wrapper style3">
+                <div class="inner">
+                    <header class="major"><h2>Go-to-Market & Rollout</h2></header>
+                    <ol><li><b>Audit (week 0):</b> confirm in the India app which of the unconfirmed items already exist, and update this plan.</li><li><b>Experiment (weeks 1&ndash;4):</b> test the onboarding verification step and report-outcome screens with a small share of new users in Bengaluru, Mumbai and Delhi, behind a feature flag.</li><li><b>Expand (weeks 5&ndash;10):</b> if verified-share and week-4 retention for women rise without more reports, extend to more metros and test verified-first for women.</li><li><b>Monetise (weeks 11&ndash;16):</b> test short passes and UPI against current plans, if not already offered.</li></ol><p>Go/no-go gates: no rise in reports per 1,000 conversations, and at least a flat paid-conversion rate versus control.</p>
+                </div>
+            </section>
+
+            <section id="sources" class="wrapper style1">
+                <div class="inner">
+                    <header class="major"><h2>Sources</h2></header>
+                    <ul>
+                        <li><a target="_blank" href="https://inc42.com/buzz/us-based-dating-app-bumbles-india-revenue-doubles-yoy-in-q3-2022">https://inc42.com/buzz/us-based-dating-app-bumbles-india-revenue-doubles-yoy-in-q3-2022</a></li>
+                        <li><a target="_blank" href="https://redseer.com/articles/whos-winning-in-indias-dating-matrimony-market-and-where-are-the-opportunities-for-platforms-and-investors/">https://redseer.com/articles/whos-winning-in-indias-dating-matrimony-market-and-where-are-the-opportunities-for-platforms-and-investors/</a></li>
+                        <li><a target="_blank" href="https://www.magzter.com/en/stories/newspaper/Financial-Express-Mumbai/LOVE-BLOOMS-FOR-SWADESHI-DATING-APPS">https://www.magzter.com/en/stories/newspaper/Financial-Express-Mumbai/LOVE-BLOOMS-FOR-SWADESHI-DATING-APPS</a></li>
+                        <li><a target="_blank" href="https://fintool.com/app/research/companies/BMBL/earnings/Q3%202025">https://fintool.com/app/research/companies/BMBL/earnings/Q3%202025</a></li>
+                        <li><a target="_blank" href="https://www.nasdaq.com/articles/bumbles-customer-retention-rate-slips-growth-getting-harder">https://www.nasdaq.com/articles/bumbles-customer-retention-rate-slips-growth-getting-harder</a></li>
+                        <li><a target="_blank" href="https://inc42.com/startups/the-info-edge-effect-how-dating-app-aisles-revenue-soared-146-after-acquisition">https://inc42.com/startups/the-info-edge-effect-how-dating-app-aisles-revenue-soared-146-after-acquisition</a></li>
+                        <li><a target="_blank" href="https://dc.fortune.com/2018/10/03/bumble-thinks-it-can-fix-dating-apps-for-women-in-india">https://dc.fortune.com/2018/10/03/bumble-thinks-it-can-fix-dating-apps-for-women-in-india</a></li>
+                        <li><a target="_blank" href="https://qz.com/india/1613650/how-priyanka-chopra-backed-dating-app-bumble-is-winning-india">https://qz.com/india/1613650/how-priyanka-chopra-backed-dating-app-bumble-is-winning-india</a></li>
+                        <li><a target="_blank" href="https://theprint.in/feature/indian-women-are-getting-assaulted-on-tinder-dates-and-no-one-knows-how-to-stop-it/151022/">https://theprint.in/feature/indian-women-are-getting-assaulted-on-tinder-dates-and-no-one-knows-how-to-stop-it/151022/</a></li>
+                        <li><a target="_blank" href="https://spir.aoir.org/ojs/index.php/spir/article/download/14037/11853/89971">https://spir.aoir.org/ojs/index.php/spir/article/download/14037/11853/89971</a></li>
+                        <li><a target="_blank" href="https://in.benzinga.com/content/36252930/indias-love-story-with-tinder-bumble-nikhil-kamath-breaks-down-the-dating-math">https://in.benzinga.com/content/36252930/indias-love-story-with-tinder-bumble-nikhil-kamath-breaks-down-the-dating-math</a></li>
+                        <li><a target="_blank" href="https://www.loestro.com/?p=11493">https://www.loestro.com/?p=11493</a></li>
+                        <li><a target="_blank" href="https://support.bumble.com/hc/articles/28537051467293-Our-safety-features">https://support.bumble.com/hc/articles/28537051467293-Our-safety-features</a></li>
+                        <li><a target="_blank" href="https://safety.bumble.com/">https://safety.bumble.com/</a></li>
+                        <li><a target="_blank" href="https://www.globaldatinginsights.com/news/private-detector-software-goes-live-on-bumble/">https://www.globaldatinginsights.com/news/private-detector-software-goes-live-on-bumble/</a></li>
+                        <li><a target="_blank" href="https://businessinsider.in/tech/how-to/bumble-is-free-but-you-can-pay-for-extra-features-heres-what-the-dating-app-offers/amp_articleshow/87786318.cms">https://businessinsider.in/tech/how-to/bumble-is-free-but-you-can-pay-for-extra-features-heres-what-the-dating-app-offers/amp_articleshow/87786318.cms</a></li>
+                    </ul>
+                    <p><i>Independent case study, not affiliated with Bumble. Several sources are press, vendor or secondary summaries; figures are indicative.</i></p>
+                    <ul class="actions"><li><a href="case-studies.html" class="button">&larr; All case studies</a></li></ul>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <section id="footer" class="wrapper split style2">
+                <div class="copyright">
+                    <p>&copy; <script>document.write(new Date().getFullYear())</script> Shivam Bajaj</p>
+                </div>
+            </section>
+        </div>
+
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.3.5.1.js"></script>
+        <script src="assets/js/skel.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+        <script src="assets/js/main.js?v=2"></script>
+
+    </body>
+</html>
