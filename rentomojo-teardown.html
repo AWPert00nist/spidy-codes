@@ -1,0 +1,193 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Shivam Bajaj | RentoMojo Product Teardown</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="stylesheet" href="assets/css/case-themes.css" />
+        <meta name="theme-color" content="#D94A1E" />
+        <link rel="icon" href="images/favicon.png">
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-43112646-3"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+
+            gtag('config', 'UA-43112646-3');
+        </script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+        <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+    </head>
+    <body class="theme-rentomojo">
+
+        <!-- Header -->
+        <header id="header">
+            <nav>
+                <ul>
+                    <li><a href="#menu">Menu</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Menu -->
+        <nav id="menu">
+            <h2>Menu</h2>
+            <ul class="links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="case-studies.html">Case Studies</a></li>
+                <li><a href="more-about-me.html">About</a></li>
+                <li><a href="index.html#contact-me-form-target">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Wrapper -->
+        <div id="wrapper">
+            <section class="wrapper style2 special">
+                <div class="inner">
+                    <header class="major">
+                        <img class="brand-logo" src="images/logos/rentomojo.svg" alt="RentoMojo logo" />
+                        <h1>RentoMojo: Renting a Product Teardown</h1>
+                        <p>A feature teardown of the rental journey, from browsing to deposit refund, by Shivam Bajaj. Built only from public sources; I have no access to RentoMojo's internal data.</p>
+                    </header>
+                    <ul class="actions jump-nav">
+                        <li><a href="#overview" class="button">Overview</a></li>
+                        <li><a href="#customers" class="button">Customers</a></li>
+                        <li><a href="#personas" class="button">Personas</a></li>
+                        <li><a href="#journey" class="button">Journey map</a></li>
+                        <li><a href="#ux" class="button">UX elements</a></li>
+                        <li><a href="#ideas" class="button">Improvements</a></li>
+                        <li><a href="#metrics" class="button">Metrics</a></li>
+                        <li><a href="#sources" class="button">Sources</a></li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="overview" class="wrapper style1">
+                <div class="inner">
+                    <header class="major"><h2>Overview</h2></header>
+                    <p>RentoMojo, founded in 2014, rents furniture, appliances and home essentials for a monthly fee, so customers avoid the upfront cost of buying. It reported about <b>&#8377;266 crore</b> revenue in FY25, up roughly 38% from FY24 (<a target="_blank" href="https://entrackr.com/news/rentomojo-posts-rs-266-cr-revenue-in-fy25-profits-surge-92-10930380">Entrackr</a>), and a profit of about &#8377;40&ndash;43 crore depending on the source (<a target="_blank" href="https://yourstory.com/2025/12/rentomojo-sees-profit-spike-to-rs-43-cr-in-fy25-on-subscription-led-growth">YourStory</a>). It has filed a draft prospectus for an IPO (<a target="_blank" href="https://www.kotakneo.com/news/market-news/rentomojo-ipo-drhp-details/">Kotak Neo</a>).</p>
+                    <p><b>Feature in focus:</b> renting a product. The customer must trust three things: the product will arrive in good shape, the full cost is clear, and the deposit comes back. Each is a product decision as well as an operations one.</p>
+                    <p><i>Revenue and profit figures come from press coverage of company-supplied numbers and differ between sources. Check them against the filing before reuse.</i></p>
+                </div>
+            </section>
+
+            <section id="customers" class="wrapper style3">
+                <div class="inner">
+                    <header class="major"><h2>Customers &amp; Competition</h2></header>
+                    <div class="row">
+                        <div class="4u 12u$(medium)">
+                            <h3>Who rents</h3>
+                            <ul>
+                                <li>Young professionals and migrants who move cities often and do not want to buy furniture (<a target="_blank" href="https://theprint.in/brandit/furniture-rental-market-reshapes-how-young-pune-sets-up-home/3070253/">ThePrint</a>).</li>
+                                <li>Families setting up a home who prefer a monthly cost over a large one-time spend.</li>
+                            </ul>
+                        </div>
+                        <div class="4u 12u$(medium)">
+                            <h3>Competitors</h3>
+                            <ul>
+                                <li>Furlenco, Cityfurnish, Rentickle and GrabOnRent are the usual names (<a target="_blank" href="https://inc42.com/features/furniture-rental-startups-stand-tall-on-indias-design-conscious-urban-millennials">Inc42</a>).</li>
+                                <li>One founder says about 90% of the furniture market is still offline, so much of the competition is the decision to buy.</li>
+                            </ul>
+                        </div>
+                        <div class="4u 12u$(medium)">
+                            <h3>The trust gap</h3>
+                            <ul>
+                                <li>Public complaint sites keep returning to deposit refunds, billing clarity and support access (<a target="_blank" href="https://voxya.com/company/rentomojo-complaints/20933">Voxya</a>; <a target="_blank" href="https://www.consumercomplaints.in/bycompany/rentomojo-a425140.html">ConsumerComplaints</a>).</li>
+                                <li>These are self-selected, so they show themes, not rates.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="personas" class="wrapper style1">
+                <div class="inner">
+                    <header class="major"><h2>Personas</h2><p>Illustrative archetypes, not real people. Pain points are linked to a source where one exists; the rest are my hypotheses.</p></header>
+                    <div class="row"><div class="4u 12u$(medium)"><h3>The relocating professional</h3><p><b>Who:</b> Moves city for work every year or two</p><p><b>Goals:</b> A furnished home without a big spend or a resale hassle</p><p><b>Pain points:</b> Deposit refund delays and deductions are a recurring complaint (<a target="_blank" href="https://www.consumercomplaints.in/bycompany/rentomojo-a425140.html">ConsumerComplaints</a>)</p><p><b>Opportunity:</b> Inspection photos and a refund tracker</p></div><div class="4u 12u$(medium)"><h3>The first-home family</h3><p><b>Who:</b> Setting up a new rented flat on a monthly budget</p><p><b>Goals:</b> Spread cost and swap items as needs change</p><p><b>Pain points:</b> <i>Hypothesis:</i> unclear minimum tenure and early-closure terms</p><p><b>Opportunity:</b> Tenure chips with commitment terms shown clearly</p></div></div>
+<div class="row"><div class="4u 12u$(medium)"><h3>The first-time renter</h3><p><b>Who:</b> Never rented furniture and unsure it beats buying</p><p><b>Goals:</b> Confidence that renting is worth it</p><p><b>Pain points:</b> Billing clarity concerns are reported (<a target="_blank" href="https://es.trustpilot.com/review/www.rentomojo.com">Trustpilot</a>)</p><p><b>Opportunity:</b> A short rent-versus-buy calculator and one-screen total cost</p></div><div class="4u 12u$(medium)"><h3>The short-stay user</h3><p><b>Who:</b> On a six-to-twelve month posting or project</p><p><b>Goals:</b> The shortest tenure and an easy early exit</p><p><b>Pain points:</b> <i>Hypothesis:</i> early closure fees are hard to predict</p><p><b>Opportunity:</b> Show early-closure cost before checkout</p></div></div>
+
+                </div>
+            </section>
+
+            <section id="journey" class="wrapper style3">
+                <div class="inner">
+                    <header class="major"><h2>User Journey Map</h2><p>Pain points marked <i>Hypothesis</i> are my guesses from standard e-commerce patterns, not observed in the app. The others come from public complaints.</p></header>
+                    <div class="table-wrapper"><table><thead><tr><th></th><th>Discover</th><th>Browse</th><th>Choose product &amp; tenure</th><th>Checkout &amp; deposit</th><th>Delivery &amp; use</th><th>Pickup &amp; refund</th></tr></thead><tbody><tr><td><b>Goal</b></td><td>Find out if renting beats buying</td><td>Shortlist good options fast</td><td>Pick the right plan length</td><td>Know the total cost</td><td>Get working items on time</td><td>Return items and get the deposit back</td></tr><tr><td><b>Action</b></td><td>Reads home page, compares to buying</td><td>Scrolls lists, searches, filters</td><td>Opens a product, selects tenure</td><td>Reviews cart, pays rent and deposit</td><td>Receives and uses items</td><td>Requests pickup, waits for refund</td></tr><tr><td><b>Feeling</b></td><td>Curious</td><td>Hurried, skimming</td><td>Unsure about commitment</td><td>Careful about hidden costs</td><td>Pleased, or annoyed if defective</td><td>Anxious about deductions</td></tr><tr><td><b>Pain point</b></td><td>Value of renting must be clear at once</td><td><i>Hypothesis:</i> thin product cards and search only on some screens</td><td><i>Hypothesis:</i> unclear minimum tenure and early-closure terms</td><td>Billing clarity and deposit adjustments are reported complaints (<a target="_blank" href="https://es.trustpilot.com/review/www.rentomojo.com">Trustpilot</a>)</td><td>Defective or late items reported (<a target="_blank" href="https://voxya.com/company/rentomojo-complaints/20933">Voxya</a>)</td><td>Deposit refund delays and deductions are the most common complaint (<a target="_blank" href="https://www.consumercomplaints.in/bycompany/rentomojo-a425140.html">ConsumerComplaints</a>)</td></tr><tr><td><b>Idea</b></td><td>Short renting-vs-buying calculator</td><td>Cards with delivery time and ratings; sticky search</td><td>Tenure as visible chips; commitment shown after choice</td><td>One screen with every charge and the refund timeline</td><td>Pre-delivery checks; easy defect reporting</td><td>Pickup photos, inspection result and a refund tracker</td></tr></tbody></table></div>
+                </div>
+            </section>
+
+            <section id="ux" class="wrapper style1">
+                <div class="inner">
+                    <header class="major"><h2>UX Elements</h2>
+                        <p>Illustrative wireframes of proposed screens. They are not screenshots of RentoMojo's app, and all copy and amounts are placeholders.</p></header>
+                    <div class="row"><div class="3u 6u$(medium) 12u$(small)" style="text-align:center"><svg viewBox="0 0 240 440" role="img" aria-label="Rent listing with search bar and richer product cards" style="width:100%;max-width:240px;height:auto"><rect x="2" y="2" width="236" height="436" rx="22" fill="#ffffff" stroke="#2b2b2b"/><rect x="90" y="10" width="60" height="6" rx="3" fill="#f1f1f1" stroke="#f1f1f1"/><rect x="14" y="26" width="212" height="30" rx="15" fill="#ffffff" stroke="#2b2b2b"/><text x="30" y="46" font-size="10" font-weight="normal" fill="#8a8a8a" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Search furniture, appliances</text><rect x="14" y="66" width="60" height="30" rx="8" fill="#fdeee8" stroke="#D94A1E"/><text x="44.0" y="85" font-size="10" font-weight="bold" fill="#D94A1E" text-anchor="middle" font-family="Helvetica,Arial,sans-serif">Sofas</text><rect x="80" y="66" width="60" height="30" rx="8" fill="#ffffff" stroke="#c9c9c9"/><text x="110.0" y="85" font-size="10" font-weight="normal" fill="#2b2b2b" text-anchor="middle" font-family="Helvetica,Arial,sans-serif">Beds</text><rect x="146" y="66" width="70" height="30" rx="8" fill="#ffffff" stroke="#c9c9c9"/><text x="181.0" y="85" font-size="10" font-weight="normal" fill="#2b2b2b" text-anchor="middle" font-family="Helvetica,Arial,sans-serif">Fridges</text><rect x="20" y="108" width="200" height="78" rx="8" fill="#ffffff" stroke="#c9c9c9"/><rect x="28" y="116" width="62" height="62" rx="8" fill="#f1f1f1" stroke="#c9c9c9"/><line x1="28" y1="116" x2="90" y2="178" stroke="#c9c9c9"/><line x1="90" y1="116" x2="28" y2="178" stroke="#c9c9c9"/><text x="96" y="132" font-size="11" font-weight="bold" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">3-seater sofa</text><text x="96" y="148" font-size="9" font-weight="normal" fill="#8a8a8a" text-anchor="start" font-family="Helvetica,Arial,sans-serif">4.5 &#9733; &#183; 1,200 rented</text><text x="212" y="132" font-size="10" font-weight="bold" fill="#2b2b2b" text-anchor="end" font-family="Helvetica,Arial,sans-serif">&#8377; xx /mo</text><text x="100" y="172" font-size="9" font-weight="bold" fill="#D94A1E" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Delivery in 2 days</text><rect x="20" y="194" width="200" height="78" rx="8" fill="#ffffff" stroke="#c9c9c9"/><rect x="28" y="202" width="62" height="62" rx="8" fill="#f1f1f1" stroke="#c9c9c9"/><line x1="28" y1="202" x2="90" y2="264" stroke="#c9c9c9"/><line x1="90" y1="202" x2="28" y2="264" stroke="#c9c9c9"/><text x="96" y="218" font-size="11" font-weight="bold" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Queen bed</text><text x="96" y="234" font-size="9" font-weight="normal" fill="#8a8a8a" text-anchor="start" font-family="Helvetica,Arial,sans-serif">4.3 &#9733; &#183; 800 rented</text><text x="212" y="218" font-size="10" font-weight="bold" fill="#2b2b2b" text-anchor="end" font-family="Helvetica,Arial,sans-serif">&#8377; xx /mo</text><text x="100" y="258" font-size="9" font-weight="bold" fill="#D94A1E" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Delivery in 3 days</text><rect x="20" y="280" width="200" height="78" rx="8" fill="#ffffff" stroke="#c9c9c9"/><rect x="28" y="288" width="62" height="62" rx="8" fill="#f1f1f1" stroke="#c9c9c9"/><line x1="28" y1="288" x2="90" y2="350" stroke="#c9c9c9"/><line x1="90" y1="288" x2="28" y2="350" stroke="#c9c9c9"/><text x="96" y="304" font-size="11" font-weight="bold" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Double-door fridge</text><text x="96" y="320" font-size="9" font-weight="normal" fill="#8a8a8a" text-anchor="start" font-family="Helvetica,Arial,sans-serif">4.4 &#9733; &#183; 950 rented</text><text x="212" y="304" font-size="10" font-weight="bold" fill="#2b2b2b" text-anchor="end" font-family="Helvetica,Arial,sans-serif">&#8377; xx /mo</text><text x="100" y="344" font-size="9" font-weight="bold" fill="#D94A1E" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Delivery in 2 days</text><rect x="14" y="372" width="212" height="50" rx="8" fill="#f1f1f1" stroke="#c9c9c9"/><text x="120" y="402" font-size="10" font-weight="normal" fill="#8a8a8a" text-anchor="middle" font-family="Helvetica,Arial,sans-serif">Wishlist &#183; Cart &#183; Profile</text></svg><p><small>1. Rent listing: sticky search, ratings, rental count and delivery time on each card</small></p></div><div class="3u 6u$(medium) 12u$(small)" style="text-align:center"><svg viewBox="0 0 240 440" role="img" aria-label="Product page with clear tenure selection" style="width:100%;max-width:240px;height:auto"><rect x="2" y="2" width="236" height="436" rx="22" fill="#ffffff" stroke="#2b2b2b"/><rect x="90" y="10" width="60" height="6" rx="3" fill="#f1f1f1" stroke="#f1f1f1"/><text x="20" y="40" font-size="14" font-weight="normal" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">&#8592;</text><text x="120" y="40" font-size="12" font-weight="bold" fill="#2b2b2b" text-anchor="middle" font-family="Helvetica,Arial,sans-serif">3-seater sofa</text><rect x="20" y="52" width="200" height="100" rx="8" fill="#f1f1f1" stroke="#c9c9c9"/><line x1="20" y1="52" x2="220" y2="152" stroke="#c9c9c9"/><line x1="220" y1="52" x2="20" y2="152" stroke="#c9c9c9"/><text x="20" y="176" font-size="11" font-weight="bold" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Choose your tenure</text><rect x="20" y="184" width="60" height="30" rx="8" fill="#ffffff" stroke="#c9c9c9"/><text x="50.0" y="203" font-size="10" font-weight="normal" fill="#2b2b2b" text-anchor="middle" font-family="Helvetica,Arial,sans-serif">3 mo</text><rect x="90" y="184" width="60" height="30" rx="8" fill="#ffffff" stroke="#c9c9c9"/><text x="120.0" y="203" font-size="10" font-weight="normal" fill="#2b2b2b" text-anchor="middle" font-family="Helvetica,Arial,sans-serif">6 mo</text><rect x="160" y="184" width="60" height="30" rx="8" fill="#fdeee8" stroke="#D94A1E"/><text x="190.0" y="203" font-size="10" font-weight="bold" fill="#D94A1E" text-anchor="middle" font-family="Helvetica,Arial,sans-serif">12 mo</text><text x="20" y="238" font-size="13" font-weight="bold" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">&#8377; xx per month</text><text x="20" y="256" font-size="10" font-weight="normal" fill="#D94A1E" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Save more on longer tenures</text><rect x="20" y="270" width="200" height="54" rx="8" fill="#ffffff" stroke="#c9c9c9"/><text x="30" y="290" font-size="10" font-weight="bold" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Minimum commitment: 12 months</text><text x="30" y="308" font-size="10" font-weight="normal" fill="#8a8a8a" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Close early with a fee. See terms.</text><rect x="20" y="334" width="200" height="34" rx="8" fill="#f1f1f1" stroke="#c9c9c9"/><text x="30" y="355" font-size="10" font-weight="normal" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Refundable deposit: &#8377; xx</text><rect x="20" y="390" width="200" height="30" rx="15" fill="#2b2b2b" stroke="#2b2b2b"/><text x="120.0" y="410" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle" font-family="Helvetica,Arial,sans-serif">Add to cart</text></svg><p><small>2. Product page: tenure as selectable chips, commitment terms shown after the choice</small></p></div><div class="3u 6u$(medium) 12u$(small)" style="text-align:center"><svg viewBox="0 0 240 440" role="img" aria-label="Cart with full cost breakdown and deposit timeline" style="width:100%;max-width:240px;height:auto"><rect x="2" y="2" width="236" height="436" rx="22" fill="#ffffff" stroke="#2b2b2b"/><rect x="90" y="10" width="60" height="6" rx="3" fill="#f1f1f1" stroke="#f1f1f1"/><text x="20" y="40" font-size="14" font-weight="normal" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">&#8592;</text><text x="120" y="40" font-size="12" font-weight="bold" fill="#2b2b2b" text-anchor="middle" font-family="Helvetica,Arial,sans-serif">Cart</text><rect x="20" y="56" width="200" height="56" rx="8" fill="#ffffff" stroke="#c9c9c9"/><rect x="28" y="64" width="40" height="40" rx="8" fill="#f1f1f1" stroke="#c9c9c9"/><line x1="28" y1="64" x2="68" y2="104" stroke="#c9c9c9"/><line x1="68" y1="64" x2="28" y2="104" stroke="#c9c9c9"/><text x="78" y="82" font-size="11" font-weight="bold" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">3-seater sofa</text><text x="78" y="98" font-size="9" font-weight="normal" fill="#8a8a8a" text-anchor="start" font-family="Helvetica,Arial,sans-serif">12 months</text><text x="20" y="140" font-size="10" font-weight="normal" fill="#8a8a8a" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Monthly rent</text><text x="220" y="140" font-size="10" font-weight="normal" fill="#2b2b2b" text-anchor="end" font-family="Helvetica,Arial,sans-serif">&#8377; xx</text><text x="20" y="160" font-size="10" font-weight="normal" fill="#8a8a8a" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Delivery &amp; installation</text><text x="220" y="160" font-size="10" font-weight="normal" fill="#2b2b2b" text-anchor="end" font-family="Helvetica,Arial,sans-serif">&#8377; xx</text><text x="20" y="180" font-size="10" font-weight="normal" fill="#8a8a8a" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Refundable deposit</text><text x="220" y="180" font-size="10" font-weight="normal" fill="#2b2b2b" text-anchor="end" font-family="Helvetica,Arial,sans-serif">&#8377; xx</text><rect x="20" y="192" width="200" height="1" rx="0" fill="#c9c9c9" stroke="#c9c9c9"/><text x="20" y="214" font-size="12" font-weight="bold" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Pay today</text><text x="220" y="214" font-size="12" font-weight="bold" fill="#2b2b2b" text-anchor="end" font-family="Helvetica,Arial,sans-serif">&#8377; xx</text><rect x="20" y="232" width="200" height="74" rx="8" fill="#fdeee8" stroke="#D94A1E"/><text x="30" y="252" font-size="10" font-weight="bold" fill="#D94A1E" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Your deposit</text><text x="30" y="270" font-size="10" font-weight="normal" fill="#D94A1E" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Returned within X days of pickup,</text><text x="30" y="286" font-size="10" font-weight="normal" fill="#D94A1E" text-anchor="start" font-family="Helvetica,Arial,sans-serif">minus any damage shown in photos.</text><rect x="20" y="390" width="200" height="30" rx="15" fill="#2b2b2b" stroke="#2b2b2b"/><text x="120.0" y="410" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle" font-family="Helvetica,Arial,sans-serif">Place order</text></svg><p><small>3. Cart: every charge in one place, plus when the deposit returns</small></p></div><div class="3u 6u$(medium) 12u$(small)" style="text-align:center"><svg viewBox="0 0 240 440" role="img" aria-label="Return and deposit refund tracker" style="width:100%;max-width:240px;height:auto"><rect x="2" y="2" width="236" height="436" rx="22" fill="#ffffff" stroke="#2b2b2b"/><rect x="90" y="10" width="60" height="6" rx="3" fill="#f1f1f1" stroke="#f1f1f1"/><text x="20" y="40" font-size="14" font-weight="normal" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">&#8592;</text><text x="120" y="40" font-size="12" font-weight="bold" fill="#2b2b2b" text-anchor="middle" font-family="Helvetica,Arial,sans-serif">Return &amp; refund</text><rect x="20" y="56" width="200" height="40" rx="8" fill="#fdeee8" stroke="#D94A1E"/><text x="30" y="80" font-size="11" font-weight="bold" fill="#D94A1E" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Pickup scheduled for Sat</text><text x="20" y="128" font-size="11" font-weight="bold" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Progress</text><circle cx="34" cy="156" r="8" fill="#D94A1E"/><text x="52" y="160" font-size="10" font-weight="normal" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Pickup requested</text><circle cx="34" cy="188" r="8" fill="#D94A1E"/><text x="52" y="192" font-size="10" font-weight="normal" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Items collected, photos taken</text><circle cx="34" cy="220" r="8" fill="#ffffff" stroke="#D94A1E"/><text x="52" y="224" font-size="10" font-weight="bold" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Inspection result shared</text><circle cx="34" cy="252" r="8" fill="#ffffff" stroke="#c9c9c9"/><text x="52" y="256" font-size="10" font-weight="normal" fill="#8a8a8a" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Deposit refunded</text><rect x="20" y="280" width="200" height="56" rx="8" fill="#ffffff" stroke="#c9c9c9"/><text x="30" y="300" font-size="10" font-weight="bold" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Refund &#8377; xx expected by date</text><text x="30" y="318" font-size="10" font-weight="normal" fill="#8a8a8a" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Dispute a deduction in one tap</text><rect x="20" y="390" width="200" height="30" rx="15" fill="#ffffff" stroke="#2b2b2b"/><text x="120.0" y="410" font-size="11" font-weight="bold" fill="#2b2b2b" text-anchor="middle" font-family="Helvetica,Arial,sans-serif">Need help?</text></svg><p><small>4. Return tracker: pickup, photos, inspection result and refund status</small></p></div></div>
+                </div>
+            </section>
+
+            <section id="ideas" class="wrapper style3">
+                <div class="inner">
+                    <header class="major"><h2>Improvement Ideas</h2><p>My suggestions, not claims about RentoMojo's roadmap.</p></header>
+                    <div class="row"><div class="6u 12u$(medium)"><h3>1. Richer product cards</h3><p>Show rating, number of rentals and delivery time on each card, and keep search visible on every listing screen. <b>Why:</b> Helps shoppers who skim lists and tends to improve click-through. <b>Risk:</b> Delivery estimates must be accurate.</p></div><div class="6u 12u$(medium)"><h3>2. Clear tenure selection</h3><p>Show tenures as chips with the monthly price for each, and show minimum commitment and early-closure terms after the choice, not above it. <b>Why:</b> Avoids readers assuming the pre-selected tenure is the only one. <b>Risk:</b> More choices can slow the decision, so keep a default.</p></div></div>
+                    <div class="row"><div class="6u 12u$(medium)"><h3>3. One-screen total cost</h3><p>List rent, delivery, deposit and any fees together, with a plain-language note on when the deposit comes back. <b>Why:</b> Billing surprises are a recurring complaint. <b>Risk:</b> Needs the same numbers to appear on the invoice.</p></div><div class="6u 12u$(medium)"><h3>4. Refund tracker with inspection photos</h3><p>Capture photos at pickup, share the inspection result, and let customers dispute a deduction in one tap. <b>Why:</b> Deposit refunds and deductions are the most reported pain point. <b>Risk:</b> Operational cost and disputes to handle.</p></div></div>
+                </div>
+            </section>
+
+            <section id="metrics" class="wrapper style1">
+                <div class="inner">
+                    <header class="major"><h2>Key Metrics</h2></header>
+                    <div class="row">
+                        <div class="4u 12u$(medium)"><h3>North Star</h3><p><b>Net new active subscriptions per month.</b></p><ul><li>Captures both acquisition and retention of rentals.</li></ul></div>
+                        <div class="4u 12u$(medium)"><h3>L1: Conversion</h3><p><b>% of product-page views that become orders.</b></p><ul><li>Split by tenure chosen and by listing-card click-through.</li></ul></div>
+                        <div class="4u 12u$(medium)"><h3>L2: Retention</h3><p><b>% of subscribers who extend or add another item.</b></p><ul><li>Compare customers with a smooth deposit refund and those with a dispute.</li></ul></div>
+                    </div>
+                    <h3>Guardrails</h3>
+                    <ul>
+                        <li>Days from pickup to deposit refund, and % of deposits with a deduction dispute.</li>
+                        <li>Complaints and support contacts per 1,000 orders.</li>
+                        <li>Early-closure rate and damage-claim rate, so clearer terms do not hurt unit economics.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="sources" class="wrapper style3">
+                <div class="inner">
+                    <header class="major"><h2>Sources</h2></header>
+                    <ul>
+                        <li><a target="_blank" href="https://entrackr.com/news/rentomojo-posts-rs-266-cr-revenue-in-fy25-profits-surge-92-10930380">https://entrackr.com/news/rentomojo-posts-rs-266-cr-revenue-in-fy25-profits-surge-92-10930380</a></li>
+                        <li><a target="_blank" href="https://yourstory.com/2025/12/rentomojo-sees-profit-spike-to-rs-43-cr-in-fy25-on-subscription-led-growth">https://yourstory.com/2025/12/rentomojo-sees-profit-spike-to-rs-43-cr-in-fy25-on-subscription-led-growth</a></li>
+                        <li><a target="_blank" href="https://www.kotakneo.com/news/market-news/rentomojo-ipo-drhp-details/">https://www.kotakneo.com/news/market-news/rentomojo-ipo-drhp-details/</a></li>
+                        <li><a target="_blank" href="https://inc42.com/features/furniture-rental-startups-stand-tall-on-indias-design-conscious-urban-millennials">https://inc42.com/features/furniture-rental-startups-stand-tall-on-indias-design-conscious-urban-millennials</a></li>
+                        <li><a target="_blank" href="https://inc42.com/?p=534424">https://inc42.com/?p=534424</a></li>
+                        <li><a target="_blank" href="https://voxya.com/company/rentomojo-complaints/20933">https://voxya.com/company/rentomojo-complaints/20933</a></li>
+                        <li><a target="_blank" href="https://www.consumercomplaints.in/bycompany/rentomojo-a425140.html">https://www.consumercomplaints.in/bycompany/rentomojo-a425140.html</a></li>
+                        <li><a target="_blank" href="https://es.trustpilot.com/review/www.rentomojo.com">https://es.trustpilot.com/review/www.rentomojo.com</a></li>
+                        <li><a target="_blank" href="https://theprint.in/brandit/furniture-rental-market-reshapes-how-young-pune-sets-up-home/3070253/">https://theprint.in/brandit/furniture-rental-market-reshapes-how-young-pune-sets-up-home/3070253/</a></li>
+                    </ul>
+                    <p><i>Independent teardown. Not affiliated with RentoMojo. Complaint-site content is user-submitted and indicative only.</i></p>
+                    <ul class="actions"><li><a href="case-studies.html" class="button">&larr; All case studies</a></li></ul>
+                </div>
+            </section>
+            <!-- Footer -->
+            <section id="footer" class="wrapper split style2">
+                <div class="copyright">
+                    <p>&copy; <script>document.write(new Date().getFullYear())</script> Shivam Bajaj</p>
+                </div>
+            </section>
+        </div>
+
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.3.5.1.js"></script>
+        <script src="assets/js/skel.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+        <script src="assets/js/main.js"></script>
+
+    </body>
+</html>

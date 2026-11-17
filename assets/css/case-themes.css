@@ -3,6 +3,12 @@ body.theme-blinkit { --hero-bg:#F8CB46; --hero-ink:#1a1a1a; --dark-bg:#0C831F; -
 body.theme-zepto   { --hero-bg:#3A0A6B; --hero-ink:#ffffff; --dark-bg:#26073f; --dark-ink:#ffffff; --dark-btn:#e6d4ff; --accent:#6D28B8; --soft:#f1e9fb; }
 body.theme-rapido  { --hero-bg:#FFD400; --hero-ink:#111111; --dark-bg:#161616; --dark-ink:#ffffff; --dark-btn:#FFD400; --accent:#111111; --soft:#fff6c9; }
 
+body.theme-rentomojo { --hero-bg:#D94A1E; --hero-ink:#ffffff; --dark-bg:#3a1a10; --dark-ink:#ffffff; --dark-btn:#ffd9cc; --accent:#D94A1E; --soft:#fdeee8; }
+
+body.theme-slice { --hero-bg:#4B3BDB; --hero-ink:#ffffff; --dark-bg:#17133a; --dark-ink:#ffffff; --dark-btn:#d9d5ff; --accent:#4B3BDB; --soft:#eeecfd; }
+
+body.theme-treebo { --hero-bg:#1B8A5A; --hero-ink:#ffffff; --dark-bg:#0f2e22; --dark-ink:#ffffff; --dark-btn:#cfeedd; --accent:#1B8A5A; --soft:#e6f5ee; }
+
 body[class*="theme-"] .wrapper.style1 { --btn: var(--accent); }
 body[class*="theme-"] .wrapper.style2 { --btn: var(--hero-ink); background-color: var(--hero-bg); color: var(--hero-ink); }
 body[class*="theme-"] .wrapper.style3 { --btn: var(--dark-btn); background-image: none; background-color: var(--dark-bg); color: var(--dark-ink); }
@@ -46,3 +52,12 @@ body[class*="theme-"] .wrapper.style1 .row.special h2 { color: var(--accent); }
 
 .brand-logo { display: block; margin: 0 auto 1.25em auto; width: 64px; height: 64px; border-radius: 14px; box-shadow: 0 2px 10px rgba(0,0,0,0.18); }
 .case-card-logo { display: block; margin: 0 auto 1em auto; width: 56px; height: 56px; border-radius: 12px; }
+
+body.theme-rentomojo .wrapper.style1 .button:hover { color: #ffffff !important; }
+body.theme-rentomojo .wrapper.style3 .button:hover { color: var(--dark-bg) !important; }
+
+body.theme-slice .wrapper.style1 .button:hover { color: #ffffff !important; }
+body.theme-slice .wrapper.style3 .button:hover { color: var(--dark-bg) !important; }
+
+body.theme-treebo .wrapper.style1 .button:hover { color: #ffffff !important; }
+body.theme-treebo .wrapper.style3 .button:hover { color: var(--dark-bg) !important; }

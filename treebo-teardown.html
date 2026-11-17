@@ -1,0 +1,159 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Shivam Bajaj | Treebo Product Teardown</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="stylesheet" href="assets/css/case-themes.css" />
+        <meta name="theme-color" content="#1B8A5A" />
+        <link rel="icon" href="images/favicon.png">
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-43112646-3"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+
+            gtag('config', 'UA-43112646-3');
+        </script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+        <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+    </head>
+    <body class="theme-treebo">
+
+        <!-- Header -->
+        <header id="header">
+            <nav>
+                <ul>
+                    <li><a href="#menu">Menu</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Menu -->
+        <nav id="menu">
+            <h2>Menu</h2>
+            <ul class="links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="case-studies.html">Case Studies</a></li>
+                <li><a href="more-about-me.html">About</a></li>
+                <li><a href="index.html#contact-me-form-target">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Wrapper -->
+        <div id="wrapper">
+            <section class="wrapper style2 special">
+                <div class="inner">
+                    <header class="major">
+                        <img class="brand-logo" src="images/logos/treebo.svg" alt="Treebo logo" />
+                        <h1>Treebo: Booking a Stay Teardown</h1>
+                        <p>A teardown of the hotel booking journey, from search to cancellation, by Shivam Bajaj. Built only from public sources; I have no access to Treebo's internal data.</p>
+                    </header>
+                    <ul class="actions jump-nav">
+                        <li><a href="#about" class="button">About</a></li>
+                        <li><a href="#persona" class="button">Persona</a></li>
+                        <li><a href="#journey" class="button">Journey map</a></li>
+                        <li><a href="#ux" class="button">UX elements</a></li>
+                        <li><a href="#ideas" class="button">Improvements</a></li>
+                        <li><a href="#metrics" class="button">Metrics</a></li>
+                        <li><a href="#sources" class="button">Sources</a></li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="about" class="wrapper style1">
+                <div class="inner">
+                    <header class="major"><h2>About Treebo</h2></header>
+                    <p>Treebo is a budget hotel chain that runs a tech-enabled franchise model: it takes on hotels exclusively and supplies branding, customer acquisition and management software (<a target="_blank" href="https://www.cbinsights.com/company/treebo-hotels/financials">CB Insights</a>; <a target="_blank" href="https://inc42.com/startups/treebo-growth-story">Inc42</a>). Its consolidated revenue from operations was about &#8377;109 crore in FY24, up around 22% (<a target="_blank" href="https://entrackr.com/fintrackr/treebo-crosses-rs-100-cr-revenue-in-fy24-outstanding-losses-climb-to-rs-488-cr-8580656">Entrackr</a>), with accommodation about 95% of it.</p>
+                    <div class="row">
+                        <div class="6u 12u$(medium)"><h3>Competitors</h3><ul><li>Entrackr names FabHotels and Bloom Hotels as direct competitors (<a target="_blank" href="https://entrackr.com/fintrackr/treebo-crosses-rs-100-cr-revenue-in-fy24-outstanding-losses-climb-to-rs-488-cr-8580656">Entrackr</a>).</li><li>Travellers also compare on travel booking platforms, which list the same rooms.</li></ul></div>
+                        <div class="6u 12u$(medium)"><h3>Value</h3><p>A consistent, clean and affordable stay, with a promise a traveller can trust before arriving. Property counts differ widely between sources, so I do not quote one.</p></div>
+                    </div>
+                    <p><i>Revenue figures are from press coverage of company filings. Check the filings before reuse.</i></p>
+                </div>
+            </section>
+
+            <section id="persona" class="wrapper style3">
+                <div class="inner">
+                    <header class="major"><h2>Personas</h2><p>Illustrative archetypes I made up, not real people. Hypotheses are labelled. Focus is the search-led user; browsing-led exploration is out of scope.</p></header>
+                    <div class="row"><div class="4u 12u$(medium)"><h3>The solo business traveller</h3><p><b>Who:</b> Travels for work, books a night or two near the office</p><p><b>Goals:</b> A clean, predictable room and an easy invoice</p><p><b>Pain points:</b> <i>Hypothesis:</i> re-enters dates and city on each trip</p><p><b>Opportunity:</b> Recent searches and saved preferences</p></div><div class="4u 12u$(medium)"><h3>The weekend family</h3><p><b>Who:</b> Parents with children on a short leisure trip</p><p><b>Goals:</b> Know what is included before paying</p><p><b>Pain points:</b> Fees surprise users late; the convenience fee is non-refundable (<a target="_blank" href="https://treebo.com/faq">Treebo FAQ</a>)</p><p><b>Opportunity:</b> Show all fees at room selection</p></div><div class="4u 12u$(medium)"><h3>The last-minute booker</h3><p><b>Who:</b> Books the same day after a plan change</p><p><b>Goals:</b> Instant confirmation and a flexible cancel rule</p><p><b>Pain points:</b> A booking shown as cancelled after payment is reported (<a target="_blank" href="https://pt.trustpilot.com/review/treebo.com">Trustpilot</a>)</p><p><b>Opportunity:</b> Clear payment status and a refund tracker</p></div></div>
+
+                </div>
+            </section>
+
+            <section id="journey" class="wrapper style1">
+                <div class="inner">
+                    <header class="major"><h2>User Journey Map</h2><p>Reported issues come from public reviews and Treebo's own FAQ. Items marked <i>Hypothesis</i> are my guesses, not observed in the app.</p></header>
+                    <div class="table-wrapper"><table><thead><tr><th></th><th>Search</th><th>Results</th><th>Hotel page</th><th>Select room</th><th>Checkout &amp; pay</th><th>Cancel or stay</th></tr></thead><tbody><tr><td><b>Goal</b></td><td>Find a clean, affordable stay for my dates</td><td>Shortlist two or three options fast</td><td>Check the room is as shown and flexible</td><td>Pick a room and rate</td><td>Pay and get a confirmed booking</td><td>Change plans or get a refund easily</td></tr><tr><td><b>Feeling</b></td><td>Hopeful</td><td>Comparing, price-sensitive</td><td>Wary of photos versus reality</td><td>Cautious about hidden fees</td><td>Anxious until confirmation</td><td>Stressed if money is stuck</td></tr><tr><td><b>Pain point</b></td><td><i>Hypothesis:</i> dates and guests re-entered across screens</td><td>Filters should show the final price including taxes</td><td><i>Hypothesis:</i> no on-page way to confirm what is included</td><td>Convenience fee is non-refundable (<a target="_blank" href="https://treebo.com/faq">Treebo FAQ</a>)</td><td>Users report a booking showing cancelled after payment (<a target="_blank" href="https://pt.trustpilot.com/review/treebo.com">Trustpilot</a>)</td><td>Refund delays reported; one review cites 45 days (<a target="_blank" href="https://pt.trustpilot.com/review/treebo.com">Trustpilot</a>)</td></tr><tr><td><b>Idea</b></td><td>Remember recent searches and dates</td><td>Total price with taxes, free-cancel filter</td><td>Included items and cancellation rule above the fold</td><td>Show fees at room selection, not at the end</td><td>Instant confirmation screen, and a payment-status check</td><td>Refund tracker with promised date</td></tr></tbody></table></div>
+                    <p>Context: the app listing advertises cancellation up to 24 hours before check-in (<a target="_blank" href="https://apps.apple.com/in/app/treebo-hotel-booking-app/id1281202038">App Store</a>). Reviews on third-party sites are individual and self-selected; they show themes, not rates.</p>
+                </div>
+            </section>
+
+            <section id="ux" class="wrapper style3">
+                <div class="inner">
+                    <header class="major"><h2>Key UX Elements</h2>
+                        <p>Illustrative wireframes of proposed screens. They are not screenshots of Treebo's app, and all copy and amounts are placeholders.</p></header>
+                    <div class="row"><div class="3u 6u$(medium) 12u$(small)" style="text-align:center"><svg viewBox="0 0 240 440" role="img" aria-label="Search with city, dates and guests" style="width:100%;max-width:240px;height:auto"><rect x="2" y="2" width="236" height="436" rx="22" fill="#ffffff" stroke="#2b2b2b"/><rect x="90" y="10" width="60" height="6" rx="3" fill="#f1f1f1" stroke="#f1f1f1"/><text x="20" y="48" font-size="14" font-weight="bold" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Find a stay</text><rect x="20" y="62" width="200" height="36" rx="8" fill="#ffffff" stroke="#c9c9c9"/><text x="30" y="85" font-size="10" font-weight="normal" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Bengaluru, Koramangala</text><rect x="20" y="106" width="96" height="36" rx="8" fill="#ffffff" stroke="#c9c9c9"/><text x="30" y="129" font-size="10" font-weight="normal" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Fri 12 Dec</text><rect x="124" y="106" width="96" height="36" rx="8" fill="#ffffff" stroke="#c9c9c9"/><text x="134" y="129" font-size="10" font-weight="normal" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Sun 14 Dec</text><rect x="20" y="150" width="200" height="36" rx="8" fill="#ffffff" stroke="#c9c9c9"/><text x="30" y="173" font-size="10" font-weight="normal" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">2 guests &#183; 1 room</text><rect x="20" y="200" width="200" height="30" rx="15" fill="#2b2b2b" stroke="#2b2b2b"/><text x="120.0" y="220" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle" font-family="Helvetica,Arial,sans-serif">Search</text><text x="20" y="254" font-size="10" font-weight="bold" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Recent searches</text><rect x="20" y="264" width="200" height="34" rx="8" fill="#f1f1f1" stroke="#c9c9c9"/><text x="30" y="285" font-size="10" font-weight="normal" fill="#8a8a8a" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Pune &#183; 3 nights</text><rect x="20" y="306" width="200" height="34" rx="8" fill="#f1f1f1" stroke="#c9c9c9"/><text x="30" y="327" font-size="10" font-weight="normal" fill="#8a8a8a" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Goa &#183; 2 nights</text></svg><p><small>1. Search: city, dates and guests, with recent searches</small></p></div><div class="3u 6u$(medium) 12u$(small)" style="text-align:center"><svg viewBox="0 0 240 440" role="img" aria-label="Results with the final price and honest filters" style="width:100%;max-width:240px;height:auto"><rect x="2" y="2" width="236" height="436" rx="22" fill="#ffffff" stroke="#2b2b2b"/><rect x="90" y="10" width="60" height="6" rx="3" fill="#f1f1f1" stroke="#f1f1f1"/><text x="20" y="40" font-size="14" font-weight="normal" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">&#8592;</text><text x="120" y="40" font-size="11" font-weight="bold" fill="#2b2b2b" text-anchor="middle" font-family="Helvetica,Arial,sans-serif">Koramangala, 2 nights</text><rect x="14" y="52" width="60" height="26" rx="13" fill="#e6f5ee" stroke="#1B8A5A"/><text x="44" y="69" font-size="9" font-weight="bold" fill="#1B8A5A" text-anchor="middle" font-family="Helvetica,Arial,sans-serif">Free cancel</text><rect x="80" y="52" width="60" height="26" rx="13" fill="#ffffff" stroke="#c9c9c9"/><text x="110" y="69" font-size="9" font-weight="normal" fill="#2b2b2b" text-anchor="middle" font-family="Helvetica,Arial,sans-serif">Breakfast</text><rect x="146" y="52" width="66" height="26" rx="13" fill="#ffffff" stroke="#c9c9c9"/><text x="179" y="69" font-size="9" font-weight="normal" fill="#2b2b2b" text-anchor="middle" font-family="Helvetica,Arial,sans-serif">&lt; &#8377;2,000</text><rect x="14" y="90" width="212" height="84" rx="8" fill="#ffffff" stroke="#c9c9c9"/><rect x="22" y="98" width="60" height="68" rx="8" fill="#f1f1f1" stroke="#c9c9c9"/><line x1="22" y1="98" x2="82" y2="166" stroke="#c9c9c9"/><line x1="82" y1="98" x2="22" y2="166" stroke="#c9c9c9"/><text x="92" y="114" font-size="11" font-weight="bold" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Hotel A</text><text x="92" y="130" font-size="9" font-weight="normal" fill="#8a8a8a" text-anchor="start" font-family="Helvetica,Arial,sans-serif">4.2 &#9733; &#183; 1.2 km</text><text x="92" y="150" font-size="11" font-weight="bold" fill="#1B8A5A" text-anchor="start" font-family="Helvetica,Arial,sans-serif">&#8377; xx total</text><text x="92" y="164" font-size="8" font-weight="normal" fill="#8a8a8a" text-anchor="start" font-family="Helvetica,Arial,sans-serif">incl. taxes and fees</text><rect x="14" y="184" width="212" height="84" rx="8" fill="#ffffff" stroke="#c9c9c9"/><rect x="22" y="192" width="60" height="68" rx="8" fill="#f1f1f1" stroke="#c9c9c9"/><line x1="22" y1="192" x2="82" y2="260" stroke="#c9c9c9"/><line x1="82" y1="192" x2="22" y2="260" stroke="#c9c9c9"/><text x="92" y="208" font-size="11" font-weight="bold" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Hotel B</text><text x="92" y="224" font-size="9" font-weight="normal" fill="#8a8a8a" text-anchor="start" font-family="Helvetica,Arial,sans-serif">4.0 &#9733; &#183; 2.0 km</text><text x="92" y="244" font-size="11" font-weight="bold" fill="#1B8A5A" text-anchor="start" font-family="Helvetica,Arial,sans-serif">&#8377; xx total</text><text x="92" y="258" font-size="8" font-weight="normal" fill="#8a8a8a" text-anchor="start" font-family="Helvetica,Arial,sans-serif">incl. taxes and fees</text><rect x="14" y="278" width="212" height="84" rx="8" fill="#ffffff" stroke="#c9c9c9"/><rect x="22" y="286" width="60" height="68" rx="8" fill="#f1f1f1" stroke="#c9c9c9"/><line x1="22" y1="286" x2="82" y2="354" stroke="#c9c9c9"/><line x1="82" y1="286" x2="22" y2="354" stroke="#c9c9c9"/><text x="92" y="302" font-size="11" font-weight="bold" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Hotel C</text><text x="92" y="318" font-size="9" font-weight="normal" fill="#8a8a8a" text-anchor="start" font-family="Helvetica,Arial,sans-serif">4.4 &#9733; &#183; 0.8 km</text><text x="92" y="338" font-size="11" font-weight="bold" fill="#1B8A5A" text-anchor="start" font-family="Helvetica,Arial,sans-serif">&#8377; xx total</text><text x="92" y="352" font-size="8" font-weight="normal" fill="#8a8a8a" text-anchor="start" font-family="Helvetica,Arial,sans-serif">incl. taxes and fees</text></svg><p><small>2. Results: total price with taxes, free-cancel filter</small></p></div><div class="3u 6u$(medium) 12u$(small)" style="text-align:center"><svg viewBox="0 0 240 440" role="img" aria-label="Hotel page: what is included and the cancellation rule" style="width:100%;max-width:240px;height:auto"><rect x="2" y="2" width="236" height="436" rx="22" fill="#ffffff" stroke="#2b2b2b"/><rect x="90" y="10" width="60" height="6" rx="3" fill="#f1f1f1" stroke="#f1f1f1"/><text x="20" y="40" font-size="14" font-weight="normal" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">&#8592;</text><text x="120" y="40" font-size="12" font-weight="bold" fill="#2b2b2b" text-anchor="middle" font-family="Helvetica,Arial,sans-serif">Hotel A</text><rect x="20" y="52" width="200" height="92" rx="8" fill="#f1f1f1" stroke="#c9c9c9"/><line x1="20" y1="52" x2="220" y2="144" stroke="#c9c9c9"/><line x1="220" y1="52" x2="20" y2="144" stroke="#c9c9c9"/><text x="20" y="166" font-size="11" font-weight="bold" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Hotel A &#183; 4.2 &#9733; (xx reviews)</text><text x="20" y="190" font-size="10" font-weight="bold" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Included</text><text x="20" y="206" font-size="10" font-weight="normal" fill="#8a8a8a" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Breakfast &#183; Wi-Fi &#183; AC &#183; Hot water</text><rect x="20" y="222" width="200" height="56" rx="8" fill="#e6f5ee" stroke="#1B8A5A"/><text x="30" y="242" font-size="10" font-weight="bold" fill="#1B8A5A" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Free cancellation until 24h</text><text x="30" y="260" font-size="10" font-weight="normal" fill="#1B8A5A" text-anchor="start" font-family="Helvetica,Arial,sans-serif">before check-in. Refund in X days.</text><text x="20" y="302" font-size="10" font-weight="normal" fill="#8a8a8a" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Check-in 12:00 &#183; Check-out 11:00</text><rect x="20" y="390" width="200" height="30" rx="15" fill="#2b2b2b" stroke="#2b2b2b"/><text x="120.0" y="410" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle" font-family="Helvetica,Arial,sans-serif">Select room</text></svg><p><small>3. Hotel page: inclusions and cancellation rule above the fold</small></p></div><div class="3u 6u$(medium) 12u$(small)" style="text-align:center"><svg viewBox="0 0 240 440" role="img" aria-label="Checkout with full price breakdown and refund timeline" style="width:100%;max-width:240px;height:auto"><rect x="2" y="2" width="236" height="436" rx="22" fill="#ffffff" stroke="#2b2b2b"/><rect x="90" y="10" width="60" height="6" rx="3" fill="#f1f1f1" stroke="#f1f1f1"/><text x="20" y="40" font-size="14" font-weight="normal" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">&#8592;</text><text x="120" y="40" font-size="12" font-weight="bold" fill="#2b2b2b" text-anchor="middle" font-family="Helvetica,Arial,sans-serif">Review &amp; pay</text><rect x="20" y="54" width="200" height="50" rx="8" fill="#ffffff" stroke="#c9c9c9"/><text x="30" y="74" font-size="11" font-weight="bold" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Hotel A &#183; 2 nights</text><text x="30" y="92" font-size="9" font-weight="normal" fill="#8a8a8a" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Fri 12 &#8211; Sun 14 Dec</text><text x="20" y="128" font-size="10" font-weight="normal" fill="#8a8a8a" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Room (2 nights)</text><text x="220" y="128" font-size="10" font-weight="normal" fill="#2b2b2b" text-anchor="end" font-family="Helvetica,Arial,sans-serif">&#8377; xx</text><text x="20" y="148" font-size="10" font-weight="normal" fill="#8a8a8a" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Taxes</text><text x="220" y="148" font-size="10" font-weight="normal" fill="#2b2b2b" text-anchor="end" font-family="Helvetica,Arial,sans-serif">&#8377; xx</text><text x="20" y="168" font-size="10" font-weight="normal" fill="#8a8a8a" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Convenience fee (non-refundable)</text><text x="220" y="168" font-size="10" font-weight="normal" fill="#2b2b2b" text-anchor="end" font-family="Helvetica,Arial,sans-serif">&#8377; xx</text><rect x="20" y="180" width="200" height="1" rx="0" fill="#c9c9c9" stroke="#c9c9c9"/><text x="20" y="202" font-size="12" font-weight="bold" fill="#2b2b2b" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Total today</text><text x="220" y="202" font-size="12" font-weight="bold" fill="#2b2b2b" text-anchor="end" font-family="Helvetica,Arial,sans-serif">&#8377; xx</text><rect x="20" y="220" width="200" height="64" rx="8" fill="#e6f5ee" stroke="#1B8A5A"/><text x="30" y="240" font-size="10" font-weight="bold" fill="#1B8A5A" text-anchor="start" font-family="Helvetica,Arial,sans-serif">If you cancel in time</text><text x="30" y="258" font-size="10" font-weight="normal" fill="#1B8A5A" text-anchor="start" font-family="Helvetica,Arial,sans-serif">Refund to your original method,</text><text x="30" y="274" font-size="10" font-weight="normal" fill="#1B8A5A" text-anchor="start" font-family="Helvetica,Arial,sans-serif">tracked in the app.</text><rect x="20" y="390" width="200" height="30" rx="15" fill="#2b2b2b" stroke="#2b2b2b"/><text x="120.0" y="410" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle" font-family="Helvetica,Arial,sans-serif">Pay now</text></svg><p><small>4. Checkout: every charge, plus the refund promise</small></p></div></div>
+                </div>
+            </section>
+
+            <section id="ideas" class="wrapper style1">
+                <div class="inner">
+                    <header class="major"><h2>Improvements</h2><p>My suggestions, not claims about Treebo's roadmap.</p></header>
+                    <div class="row"><div class="6u 12u$(medium)"><h3>1. Total price in results</h3><p>Show the final price with taxes and fees on each card. <b>Why:</b> Fees revealed late erode trust and cause drop-off at checkout. <b>Risk:</b> Higher headline price versus rivals who hide fees.</p></div><div class="6u 12u$(medium)"><h3>2. Cancellation rule up front</h3><p>Put what is included and the cancellation rule above the fold on the hotel page. <b>Why:</b> Flexibility is a main reason to book directly. <b>Risk:</b> Strict rules shown early may lower conversion.</p></div></div>
+                    <div class="row"><div class="6u 12u$(medium)"><h3>3. Show fees at room selection</h3><p>Move the convenience fee from the last step to room selection, and say whether it is refundable. <b>Why:</b> The FAQ says it is non-refundable, which surprises people at cancellation. <b>Risk:</b> Revenue impact if the fee is discouraged.</p></div><div class="6u 12u$(medium)"><h3>4. Payment status and refund tracker</h3><p>If payment succeeds but confirmation is delayed, show a clear status. After cancellation, show the refund stage and date. <b>Why:</b> Reviews report cancelled bookings after payment and slow refunds. <b>Risk:</b> Needs reliable payment-gateway status data.</p></div></div>
+                </div>
+            </section>
+
+            <section id="metrics" class="wrapper style3">
+                <div class="inner">
+                    <header class="major"><h2>Key Success Metrics</h2></header>
+                    <div class="row">
+                        <div class="4u 12u$(medium)"><h3>North Star</h3><p><b>Stays completed per month</b> (booked and checked in, not cancelled).</p></div>
+                        <div class="4u 12u$(medium)"><h3>L1: Conversion</h3><p><b>Checkout starts to paid bookings.</b></p><ul><li>Also payment success rate.</li></ul></div>
+                        <div class="4u 12u$(medium)"><h3>L2: Retention</h3><p><b>Second booking within 90 days / first bookings.</b></p><ul><li>Plus direct-app share of bookings.</li></ul></div>
+                    </div>
+                    <h3>Guardrails</h3>
+                    <ul><li>Days from cancellation to refund, and refund-related support contacts per 1,000 bookings.</li><li>Cancellation rate and no-show rate.</li><li>Average rating after stay and NPS.</li></ul>
+                </div>
+            </section>
+
+            <section id="sources" class="wrapper style1">
+                <div class="inner">
+                    <header class="major"><h2>Sources</h2></header>
+                    <ul>
+                        <li><a target="_blank" href="https://entrackr.com/fintrackr/treebo-crosses-rs-100-cr-revenue-in-fy24-outstanding-losses-climb-to-rs-488-cr-8580656">https://entrackr.com/fintrackr/treebo-crosses-rs-100-cr-revenue-in-fy24-outstanding-losses-climb-to-rs-488-cr-8580656</a></li>
+                        <li><a target="_blank" href="https://inc42.com/startups/treebo-growth-story">https://inc42.com/startups/treebo-growth-story</a></li>
+                        <li><a target="_blank" href="https://www.cbinsights.com/company/treebo-hotels/financials">https://www.cbinsights.com/company/treebo-hotels/financials</a></li>
+                        <li><a target="_blank" href="https://treebo.com/faq">https://treebo.com/faq</a></li>
+                        <li><a target="_blank" href="https://apps.apple.com/in/app/treebo-hotel-booking-app/id1281202038">https://apps.apple.com/in/app/treebo-hotel-booking-app/id1281202038</a></li>
+                        <li><a target="_blank" href="https://pt.trustpilot.com/review/treebo.com">https://pt.trustpilot.com/review/treebo.com</a></li>
+                    </ul>
+                    <p><i>Format inspired by a MakeMyTrip teardown by another author; all content here is original. Independent teardown, not affiliated with Treebo. Review-site content is user-submitted and indicative only.</i></p>
+                    <ul class="actions"><li><a href="case-studies.html" class="button">&larr; All case studies</a></li></ul>
+                </div>
+            </section>
+            <!-- Footer -->
+            <section id="footer" class="wrapper split style2">
+                <div class="copyright">
+                    <p>&copy; <script>document.write(new Date().getFullYear())</script> Shivam Bajaj</p>
+                </div>
+            </section>
+        </div>
+
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.3.5.1.js"></script>
+        <script src="assets/js/skel.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+        <script src="assets/js/main.js"></script>
+
+    </body>
+</html>
